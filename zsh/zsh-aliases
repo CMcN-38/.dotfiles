@@ -1,0 +1,35 @@
+#!/bin/sh
+alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+alias vimrc='vim ~/.config/nvim/init.lua'
+alias vimplug='vim ~/.config/nvim/lua/plugins.lua'
+alias zshrc='vim ~/.config/zsh/.zshrc'
+
+# Colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# Default to nvim
+alias vim="nvim"
+alias vi="nvim"
+alias nano="nvim"
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
+# Colour
+alias ls="ls -G --color=auto"
+
+# easier to read disk
+alias df='df -h'     # human-readable sizes
+alias free='free -m' # show sizes in MB
+
+# Navigate to obsidian folder
+alias cdobs="cd ~/Library/'Mobile Documents'/iCloud~md~obsidian/Documents/Vault"
+alias cdaoc="cd ~/00_Documents/40-49_Personal_Development/41_Programming/41.15_Advent_of_Code"
+
+
+# Navigate to the root folder
+alias cdroot="cd ~/../../.."
+alias cdcon="cd ~/.config/"
