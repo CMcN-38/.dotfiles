@@ -22,6 +22,7 @@
 #
 
 ln -s ~/.dotfiles/alacritty ~/.config/alacritty
+ln -s ~/.dotfiles/btop ~/config/btop
 ln -s ~/.dotfiles/hypr ~/.config/hypr
 ln -s ~/.dotfiles/mpv ~/.config/mpv
 ln -s ~/.dotfiles/nvim ~/.config/nvim
