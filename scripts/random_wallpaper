@@ -1,0 +1,5 @@
+#!/usr/bin/zsh
+
+WALLPAPER=$(find ${wallpaperDir} -maxdepth 1 -not -path '*/.*' -name '*' | awk '!/^\./' | tail -n +2 | shuf -n 1)
+
+/usr/bin/swww img "$WALLPAPER"

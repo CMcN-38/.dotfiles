@@ -5,6 +5,8 @@ export XDG_CONFIG_HOME=~/.config/
 
 export PATH="$PATH:/opt/homebrew/bin/python"
 
+export wallpaperDir=~/04_media/41_wallpapers/4k/
+
 # PLUGINS
 plugins=(git)
 

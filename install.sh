@@ -36,6 +36,8 @@ ln -s ~/.dotfiles/.icons ~/.icons
 ln -s ~/.dotfiles/.themes ~/.themes
 ln -s ~/.dotfiles/.tmux ~/.tmux
 
+sudo ln -s ~/.dotfiles/scripts/random_wallpaper /usr/local/bin/random_wallpaper
+
 
 #  ___  __  ____    ____  ____  ____  _  _  ____ 
 # / __)(  )(_  _)  / ___)(  __)(_  _)/ )( \(  _ \
