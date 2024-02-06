@@ -24,6 +24,7 @@
 ln -s ~/.dotfiles/alacritty ~/.config/alacritty
 ln -s ~/.dotfiles/btop ~/config/btop
 ln -s ~/.dotfiles/hypr ~/.config/hypr
+ln -s ~/.dotfiles/lazygit ~/.config/lazygit
 ln -s ~/.dotfiles/mpv ~/.config/mpv
 ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/starship ~/.config/starship
