@@ -10,9 +10,11 @@ vim.o.expandtab = true
 vim.o.tabstop = 8
 vim.o.shiftwidth = 8
 vim.o.smarttab = true
-vim.o.mouse = 'a'
-vim.o.scrolloff = 10
+vim.o.scrolloff = 25
 vim.o.clipboard = 'unnamed'
+vim.o.mouse = ""
 
 --KEYMAPS
 vim.g.mapleader = " "
+local map = vim.api.nvim_set_keymap
+map('n', '<C-t>', ':silent !tmux neww tmux-sessioniser<CR>', {noremap = true, silent = true})

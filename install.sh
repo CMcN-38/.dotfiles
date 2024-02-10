@@ -39,7 +39,8 @@ ln -s ~/.dotfiles/.themes ~/.themes
 ln -s ~/.dotfiles/.tmux ~/.tmux
 
 sudo ln -s ~/.dotfiles/scripts/random_wallpaper /usr/local/bin/random_wallpaper
-
+sudo ln -s ~/.dotfiles/scripts/tmux-sessioniser /usr/local/bin/tmux-sessioniser
+sudo ln -s ~/.dotfiles/scripts/tmux-cht.sh /usr/local/bin/tmux-cht.sh
 
 #  ___  __  ____    ____  ____  ____  _  _  ____ 
 # / __)(  )(_  _)  / ___)(  __)(_  _)/ )( \(  _ \

@@ -33,3 +33,5 @@ alias cdaoc="cd ~/00_Documents/40-49_Personal_Development/41_Programming/41.15_A
 # Navigate to the root folder
 alias cdroot="cd ~/../../.."
 alias cdcon="cd ~/.config/"
+
+bindkey -s ^F "tmux-sessioniser\n"
