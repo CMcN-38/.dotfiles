@@ -1,5 +1,6 @@
 * {
-  font-family: JetBrainsMono;
+  font-family: Fira Code Nerd Font;
+  font-size: 20px;
   color: #e5e9f0;
   background: transparent;
 }
@@ -8,18 +9,19 @@
   background: rgba(41, 46, 66, 0.5);
   margin: auto;
   padding: 10px;
-  border-radius: 20px;
-  border: 5px solid #b072d1;
+  border-radius: 100px;
+  border: 5px solid #;
 }
 
 #input {
   padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 15px;
+  margin-bottom: 20px;
+  border-radius: 40px;
 }
 
 #outer-box {
-  padding: 20px;
+  padding: 40px;
+  border-radius: 40px;
 }
 
 #img {
@@ -27,14 +29,17 @@
 }
 
 #entry {
-  padding: 10px;
-  border-radius: 15px;
+  padding: 15px;
+  border-radius: 40px;
 }
 
 #entry:selected {
   background-color: #2e3440;
+  border-radius: 40px;
+  border: 2px solid #f5e0dc;
+  outline: none;
 }
 
 #text {
-  margin: 2px;
+  margin: 10px;
 }
