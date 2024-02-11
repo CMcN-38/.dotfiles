@@ -15,7 +15,6 @@
         "battery",
         "pulseaudio",
 		"clock",
-		"tray",
         "custom/notification"
 	],
     "hyprland/workspaces": {
@@ -62,10 +61,6 @@
         "format-disconnected": "󰤮 ",
         "tooltip": false,
     },
-	"tray": {
-		//"icon-size": 24,
-		"spacing": 12
-	},
     "pulseaudio": {
         "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
