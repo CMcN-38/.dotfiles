@@ -69,12 +69,8 @@
                     "command": "thunar"
                 },
                 {
-                    "label": "",
-                    "command": "pavucontrol"
-                },
-                {
                     "label": "",
-                    "command": "ario"
+                    "command": "cider"
                 },
                 {
                     "label": "󰕾",
@@ -83,18 +79,6 @@
                 {
                     "label": "󰍬",
                     "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-                },
-                {
-                    "label": "",
-                    "command": "steam"
-                },
-                {
-                    "label": "",
-                    "command": "firefox"
-                },
-                {
-                    "label": "",
-                    "command": "obs"
                 }
             ]
         }
