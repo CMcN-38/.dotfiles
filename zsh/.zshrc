@@ -45,3 +45,5 @@ else
     eval "$(/opt/homebrew/bin/brew shellenv)" #mac
   fi
 fi
+
+eval "$(zoxide init zsh)"
