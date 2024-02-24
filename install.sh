@@ -21,8 +21,10 @@
 # (_)\___)\__/ \_)__)(__)  (__)\___/  \____/(__)\_)__)(__\_)(____/
 #
 
+mkidr ~/.config
+
 ln -s ~/.dotfiles/alacritty ~/.config/alacritty
-ln -s ~/.dotfiles/btop ~/config/btop
+ln -s ~/.dotfiles/btop ~/.config/btop
 ln -s ~/.dotfiles/flameshot ~/.config/flameshot
 ln -s ~/.dotfiles/hypr ~/.config/hypr
 ln -s ~/.dotfiles/lazygit ~/.config/lazygit
