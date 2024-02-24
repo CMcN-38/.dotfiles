@@ -21,7 +21,7 @@
 # (_)\___)\__/ \_)__)(__)  (__)\___/  \____/(__)\_)__)(__\_)(____/
 #
 
-mkidr ~/.config
+mkdir ~/.config
 
 ln -s ~/.dotfiles/alacritty ~/.config/alacritty
 ln -s ~/.dotfiles/btop ~/.config/btop
