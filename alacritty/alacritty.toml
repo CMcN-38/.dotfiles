@@ -47,5 +47,5 @@ style = "Regular"
 opacity = 0.9
 
 [shell]
-        program = "/usr/bin/tmux"
+        program = "/run/current-system/sw/bin/tmux"
         args = ["new-session", "-A", "-D", "-s", "home"]
