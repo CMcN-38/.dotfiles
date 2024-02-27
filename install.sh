@@ -31,6 +31,7 @@ ln -s ~/.dotfiles/lazygit ~/.config/lazygit
 ln -s ~/.dotfiles/mpv ~/.config/mpv
 ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/starship ~/.config/starship
+ln -s ~/.dotfiles/swappy ~/.config/swappy
 ln -s ~/.dotfiles/swaync ~/.config/swaync
 ln -s ~/.dotfiles/tmux ~/.config/tmux
 ln -s ~/.dotfiles/waybar ~/.config/waybar
@@ -44,6 +45,8 @@ ln -s ~/.dotfiles/.tmux ~/.tmux
 sudo ln -s ~/.dotfiles/scripts/random_wallpaper /usr/local/bin/random_wallpaper
 sudo ln -s ~/.dotfiles/scripts/tmux-sessioniser /usr/local/bin/tmux-sessioniser
 sudo ln -s ~/.dotfiles/scripts/tmux-cht.sh /usr/local/bin/tmux-cht.sh
+sudo ln -s ~/.dotfiles/scripts/rebuild.sh /usr/local/bin/rebuild
+sudo ln -s ~/.dotfiles/scripts/screenshot.sh /usr/local/bin/screenshot
 
 sudo ln -s ~/.config/zsh/.zshrc ~/.zshrc
 #  ___  __  ____    ____  ____  ____  _  _  ____ 
