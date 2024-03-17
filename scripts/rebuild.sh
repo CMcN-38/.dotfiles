@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 pushd /home/cameron/.nixos/
-sudo nvim configuration.nix
+nvim 
 alejandra . &>/dev/null
 git diff -U0 *.nix
 echo "NixOS Rebuilding..."

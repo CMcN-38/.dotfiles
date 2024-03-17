@@ -15,7 +15,6 @@
         "battery",
         "pulseaudio",
 		"clock",
-                "tray",
         "custom/notification"
 	],
     "hyprland/workspaces": {

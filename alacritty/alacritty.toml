@@ -44,7 +44,7 @@ style = "Regular"
 # WINDOW
 [window]
 
-opacity = 0.9
+opacity = 0.85
 
 [shell]
         program = "/run/current-system/sw/bin/tmux"

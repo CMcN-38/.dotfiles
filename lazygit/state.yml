@@ -1,5 +1,6 @@
 lastupdatecheck: 0
 recentrepos:
+- /home/cameron/.nixos
 - /home/cameron/.dotfiles
 startuppopupversion: 5
 customcommandshistory: []
