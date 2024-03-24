@@ -1,5 +1,5 @@
 # Move default files
-#export VIMINIT="source ~/.config/nvim/init.lua"
+# export VIMINIT="source ~/0_projects/008_kickstart.nvim/init.lua"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export XDG_CONFIG_HOME=~/.config/
 #export XDG_CURRENT_DESKTOP=sway flameshot
