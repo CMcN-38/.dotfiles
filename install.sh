@@ -30,6 +30,7 @@ ln -s ~/.dotfiles/hypr ~/.config/hypr
 ln -s ~/.dotfiles/lazygit ~/.config/lazygit
 ln -s ~/.dotfiles/mpv ~/.config/mpv
 ln -s ~/.dotfiles/nvim ~/.config/nvim
+ln -s ~/.dotfiles/rofi ~/.config/rofi
 ln -s ~/.dotfiles/starship ~/.config/starship
 ln -s ~/.dotfiles/swappy ~/.config/swappy
 ln -s ~/.dotfiles/swaync ~/.config/swaync
@@ -47,6 +48,7 @@ sudo ln -s ~/.dotfiles/scripts/tmux-sessioniser /usr/local/bin/tmux-sessioniser
 sudo ln -s ~/.dotfiles/scripts/tmux-cht.sh /usr/local/bin/tmux-cht.sh
 sudo ln -s ~/.dotfiles/scripts/rebuild.sh /usr/local/bin/rebuild
 sudo ln -s ~/.dotfiles/scripts/screenshot.sh /usr/local/bin/screenshot
+sudo ln -s ~/.dotfiles/scripts/emoji-picker.sh /usr/local/bin/emoji-picker
 
 sudo ln -s ~/.config/zsh/.zshrc ~/.zshrc
 #  ___  __  ____    ____  ____  ____  _  _  ____ 
