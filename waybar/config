@@ -14,7 +14,7 @@
         "network#wifi",
         "battery",
         "pulseaudio",
-		"clock",
+        "clock",
         "custom/notification"
 	],
     "hyprland/workspaces": {
@@ -31,7 +31,7 @@
         "on-scroll-down": "hyprctl dispatch workspace e-1",
     },
 	"clock": {
-        "format": "{:  %H:%M}",
+        "format": " {:%H:%M}",
 		"tooltip": false
 	},
 	"hyprland/window": {
