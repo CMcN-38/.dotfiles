@@ -13,6 +13,7 @@ alias fgrep='fgrep --color=auto'
 alias vim="nvim"
 alias vi="nvim"
 alias nano="nvim"
+alias v="nvim"
 alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
 # confirm before overwriting something
 alias cp="cp -i"

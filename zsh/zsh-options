@@ -1,0 +1,9 @@
+setopt correct # correct spelling errors
+setopt extendedglob # enable extended globbing
+setopt nocaseglob # case insensitive globbing
+setopt rcexpandparam # expand parameter in place
+setopt numericglobsort # sort filenames numerically when it makes sense
+setopt appendhistory # append to the history file, don't overwrite it
+setopt histignorealldups # don't record duplicates in the history
+setopt inc_append_history # add commands to the history file as they are run
+
