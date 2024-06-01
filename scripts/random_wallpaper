@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
 WALLPAPER=$(find ${wallpaperDir} -maxdepth 1 -not -path '*/.*' -name '*' | awk '!/^\./' | tail -n +2 | shuf -n 1)
-
 /run/current-system/sw/bin/swww img "$WALLPAPER" --transition-type any --transition-duration 2 --transition-step 255 --transition-fps 255
 

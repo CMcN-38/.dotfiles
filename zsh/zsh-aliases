@@ -21,7 +21,8 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # Colour
-alias ls="ls -G --color=auto"
+# alias ls="ls -G --color=auto"
+alias ls="lsd"
 
 # easier to read disk
 alias df='df -h'     # human-readable sizes
