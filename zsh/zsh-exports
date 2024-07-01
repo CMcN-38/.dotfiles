@@ -6,6 +6,7 @@ export XDG_CONFIG_HOME=~/.config/
 
 export PATH="$PATH:/opt/homebrew/bin/python"
 export PATH="$PATH:/usr/local/bin/"
+export PATH="$PATH:$HOME/.go/bin"
 
 export wallpaperDir=~/4_media/41_wallpapers/4k/
 
