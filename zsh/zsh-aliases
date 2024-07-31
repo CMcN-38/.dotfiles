@@ -19,6 +19,9 @@ alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
 alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
+## timg
+alias timg="timg -p k"
+alias icat="timg -p k"
 
 # Colour
 # alias ls="ls -G --color=auto"
