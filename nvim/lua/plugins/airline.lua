@@ -1,8 +1,10 @@
 return {
-        {"vim-airline/vim-airline"},
-        {"vim-airline/vim-airline-themes",
+        {"echasnovski/mini.statusline",
                 config = function()
-                        vim.g.airline_theme = 'base16'
+                        statusline.setup { use_icons = vim.g.have_nerd_font }
+                        statusline.section_location = function()
+                                return '%2l:%-2v'
+                        end
                 end
         },
 }
