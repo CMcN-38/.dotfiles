@@ -1,0 +1,40 @@
+#
+# ██████╗███╗   ███╗ ██████╗███╗   ██╗      ██████╗  █████╗ 
+#██╔════╝████╗ ████║██╔════╝████╗  ██║      ╚════██╗██╔══██╗
+#██║     ██╔████╔██║██║     ██╔██╗ ██║█████╗ █████╔╝╚█████╔╝
+#██║     ██║╚██╔╝██║██║     ██║╚██╗██║╚════╝ ╚═══██╗██╔══██╗
+#╚██████╗██║ ╚═╝ ██║╚██████╗██║ ╚████║      ██████╔╝╚█████╔╝
+# ╚═════╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═══╝      ╚═════╝  ╚════╝ 
+#
+
+# _    ___  _ ____  ____  _     ____  _      ____ 
+#/ \ /|\  \///  __\/  __\/ \   /  _ \/ \  /|/  _ \
+#| |_|| \  / |  \/||  \/|| |   | / \|| |\ ||| | \|
+#| | || / /  |  __/|    /| |_/\| |-||| | \||| |_/|
+#\_/ \|/_/   \_/   \_/\_\\____/\_/ \|\_/  \|\____/
+#                                                 
+
+# Monitor Sttings
+# monitor=,2736x1824,auto,1.266667
+monitor=,3840x2160,auto,1
+
+# Set programs that you use
+$terminal = kitty
+$fileManager = thunar
+$menu = rofi -show drun 
+$browser = appimage-run -d /home/cameron/2_desktop/zen-specific.AppImage
+# $browser = firefox
+
+# Some default env vars.
+env = XCURSOR_SIZE,24
+env = QT_QPA_PLATFORMTHEME,qt5ct
+env = XDG_CURRENT_DESKTOP,Hyprland
+env = XDG_SESSION_TYPE,wayland
+env = WLR_NO_HARDWARE_CURSORS,1
+
+# Source Files:
+source = ~/.config/hypr/autostart.conf
+source = ~/.config/hypr/keybindings.conf 
+source = ~/.config/hypr/rules.conf
+source = ~/.config/hypr/theming.conf
+

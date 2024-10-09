@@ -1,0 +1,1 @@
+/home/cameron/.config/nvim/init.lua
