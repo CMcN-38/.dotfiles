@@ -1,0 +1,73 @@
+<span class="field field--name-title field--type-string field--label-hidden">Tips for running virtual, in-person, and hybrid events</span>
+<span class="field field--name-uid field--type-entity-reference field--label-hidden"><a title="View user profile." href="https://opensource.com/users/rpaik" class="username">rpaik</a></span>
+<span class="field field--name-created field--type-created field--label-hidden"><time datetime="2023-05-03T03:00:00-04:00" title="Wednesday, May 3, 2023 - 03:00" class="datetime">Wed, 05/03/2023 - 03:00</time>
+</span>
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Over the past few years, virtual events have thrived. In-person events are back now, but it's important to keep in mind that virtual events didn't just come out of nowhere. Many of us were actually doing a lot of different online events even before they became popular. Many communities held hackathons, bug and issue triaging, webinars, and so on, as virtual events. They brought community members together for collaboration and education. Virtual events have improved since then, largely out of necessity, and I think we've all learned a lot. In this article, I consider how virtual and physical events can co-exist to render an improved event experience for everyone.</p>
+<h2>Costs and crowds</h2>
+<p>I don't think anyone wants to go back to the days when all events were happening on screens. But virtual events do have important advantages compared to in-person events. To begin with, it is relatively easy to start a virtual event as you often don't need much beyond meeting and streaming platforms. It can be as basic as live streaming from a <a href="https://opensource.com/article/20/5/open-source-video-conferencing">video chat platform</a>. This is especially useful for small communities that don't have a large events budget. In fact, a virtual event platform provides an opportunity to build an audience before you start making significant investments in in-person events.</p>
+<p>The lower cost and logistical hurdles of virtual meetings don't just apply to the event organizer. It matters to attendees and community members too. A typical meetup is likely to last for 60 to 90 minutes. Is everyone always happy to commute 30 minutes each way to get to the meeting venue? A meetup in a virtual format can lower the participation barrier for attendees. I think this is one of the reasons that many meetups are continuing in virtual formats today.</p>
+<p>The cost of doing virtual events is much lower, so there's low-risk of experimenting with different content, format, target audiences, and so on. Even if a new event isn't a huge success, you won't have to invest a large budget on the venue, equipment, people, travel, and so on. And you're able to get some valuable learning from the event no matter what.</p>
+<h2>Practical events</h2>
+<p>In addition, there are some activities that are just well-suited for virtual events. Things like documentation and bug triaging are crucial in open source communities. Despite this most people see them more like chores that they'd rather avoid. Why not have a short one to two day window where community members come together online so they can work on these chores together while supporting each other?</p>
+<h2>Hybrid events</h2>
+<p>Many events are going hybrid now, with both in-person and virtual components. By hybrid, I don't mean just broadcasting in-person sessions from conference facilities. Many have separate tracks for in-person and virtual participants. FOSDEM 2023 is a great example of a hybrid event, with <a href="https://fosdem.org/2023/schedule/rooms/" rel="noopener" target="_blank">separate online rooms</a>.</p>
+<p>Some utilize virtual tracks for "Day 0" events (orientation, project team meetings, meetups, and so on). This way, people who aren't able to travel to the in-person conference can still participate in the earliest events. By having a separate virtual track, you can potentially reduce the total length of the in-person conference. This means people don't have to be away from home as long as a 100% in-person event.</p>
+<h2>The dos and don'ts</h2>
+<p>Here are some tips based on my experience of attending and organizing virtual events.</p>
+<ul>
+<li>
+<p><strong>DON'T</strong> have the same structure as in-person events. When you have an event online, you wouldn't want to ask the audience to sit through a full day of presentations. It's difficult for most people to stare at their screens for a long period of time. If you have more than four hours of content, consider spreading the event over a few days so that attendees only need to sit through a maximum of a couple of hours of presentations each day. You also don't always need to add breaks between sessions in virtual events because people aren't moving to different rooms. As a matter of fact, by hot switching to the next session, you're less likely to lose attendees between presentations.</p>
+</li>
+<li>
+<p><strong>DON'T</strong> put a wall around the content after the event. I recently registered and attended an event and was told that slides and recordings would be available a few weeks after the event. When I returned to the event page a few weeks later, it asked me to register with my email address to get access to the content! I understand people's desire to collect leads. But if people had to register for the event already, or the event was live-streamed, it's not appropriate to ask them to share their contact information. Instead, make the content accessible to anyone.</p>
+</li>
+<li>
+<p><strong>DON'T</strong> force synchronous participation from attendees. One of the key benefits of virtual events is that it's easier for everyone to attend or participate. If a person cannot watch a presentation live, provide ways for them to interact with presenters and other attendees asynchronously.</p>
+</li>
+<li>
+<p><strong>DO</strong> make content available prior to events. Online events make it easier for community members to participate asynchronously. Things like publishing slides or Q&amp;A pages ahead of time allow attendees to review content and post questions that presenters can address during and after the session. Also, if you're doing a hands-on workshop, publishing a prep guide before the event allows attendees to set up their environment so that it's easier to follow along during the presentation and play around in their sandbox.</p>
+</li>
+<li>
+<p><strong>DO</strong> have presenters available for asynchronous Q&amp;A sessions. Some of the virtual events I enjoyed had dedicated Q&amp;A channels (Mattermost or Discourse are great open source options) where you could interact with presenters well after their session ended. At an in-person conference, you're often limited to a 10 or 15 minute break after a session to talk to the presenter. Virtual events allow you to have a Q&amp;A channel available for a few days after the event.&nbsp; This let's both synchronous and asynchronous attendees communicate with presenters.</p>
+</li>
+</ul>
+<h2>Best of both worlds</h2>
+<p>I'm definitely glad that in-person events are back and I'm able to see my open source friends again in real life. However, I don't think we need to completely put virtual events behind us. In particular, hybrid events with "virtual tracks" can make events accessible to more community members and help you reach a wider audience. I think society has learned some important lessons, so let's put them to good use.</p>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-article-subhead field--type-text-long field--label-hidden field__item"><p>Create the perfect blend of virtual and in-person events.</p>
+</div>
+      
+            <div class="field field--name-field-lead-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-caption">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/lead-images/people_remote_teams_world.png" width="520" height="292" alt="Remote people connected on clouds" title="Remote people connected on clouds">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>Opensource.com</p>
+</div>
+
+  </article>
+</div>
+      
+      <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><a href="https://opensource.com/tags/conferences-and-events" hreflang="en">Conferences and events</a></div>
+          </div>
+  
+            <div class="hidden field field--name-field-listicle-title field--type-string field--label-hidden field__item">What to read next</div>
+      
+            <div class="field field--name-field-default-license field--type-list-string field--label-hidden field__item"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License" src="https://opensource.com/themes/osdc/assets/img/cc-by-sa-4.png" title="This work is licensed under a Creative Commons Attribution-Share Alike 4.0 International License."></a>This work is licensed under a Creative Commons Attribution-Share Alike 4.0 International License.</div>
+      <section id="comments" class="field field--name-field-comments field--type-comment field--label-hidden comment-wrapper">
+  
+
+  <div class="comments__count">
+                  <h2>Comments are closed.</h2>
+              <div class="login">These comments are closed.</div>
+  </div>
+
+  
+  
+</section>

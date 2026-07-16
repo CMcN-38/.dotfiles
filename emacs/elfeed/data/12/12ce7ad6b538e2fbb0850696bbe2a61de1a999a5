@@ -1,0 +1,179 @@
+<span class="field field--name-title field--type-string field--label-hidden">Generate web pages from Markdown with Docsify-This</span>
+<span class="field field--name-uid field--type-entity-reference field--label-hidden"><a title="View user profile." href="https://opensource.com/users/paulhibbitts" class="username">paulhibbitts</a></span>
+<span class="field field--name-created field--type-created field--label-hidden"><time datetime="2023-05-02T03:00:00-04:00" title="Tuesday, May 2, 2023 - 03:00" class="datetime">Tue, 05/02/2023 - 03:00</time>
+</span>
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Are you interested in leveraging Markdown for online content without any website setup or build process? How about seamlessly embedding constraint-free Markdown or HTML into multiple platforms (such as a content management system or learning management system)? The open source project <a href="https://docsify-this.net" target="_blank">Docsify-This</a>, built with <a href="https://docsify.js.org" target="_blank">Docsify.js</a>, provides an easy way to publish, share, and reuse Markdown content.</p>
+<p><strong>[ Get the <a href="https://opensource.com/downloads/cheat-sheet-markdown" target="_blank">Markdown cheat sheet</a> ]</strong></p>
+<h2 id="docsify-this">What is Docsify-This?</h2>
+<p>With Docsify-This, you can instantly turn any publicly available Markdown file into a responsive standalone web page. You can also link multiple Markdown files to create a simple website. Designers can alter the visual appearance of displayed pages with the point-and-click Web Page Builder interface or URL parameters. You can also use a set of provided Markdown CSS classes when creating your own Markdown content. In addition, if you use Codeberg or GitHub to store your Markdown files, an <strong>Edit this Page</strong> link can be automatically provided for each page to support collaborative authoring.</p>
+<p>It's open source, so you can host a Docsify-This instance using your own custom domain without the risk of platform lock-in.</p>
+<h2 id="web-page-builder">Use the Docsify-This Web Page Builder</h2>
+<p>To use the Web Page Builder, open a browser and navigate to the <a href="https://docsify-this.net" target="_blank">Docsify-This website</a> or your local instance. In the <strong>Web Page Builder</strong> section, enter the URL of a Markdown file in a public repo of Codeberg or GitHub (other Git hosts can also be used via Docsify-This URL parameters but not in the Web Page Builder), and then click the <strong>Publish as Standalone Web Page</strong> button.</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/docsify-this-web-page-builder.webp" width="2028" height="1441" alt="The Docsify-This web page builder interface">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Paul Hibbitts, CC BY-A 4.0)</p>
+</div>
+
+  </article>
+<p>The Markdown file is rendered as a standalone web page with a URL you can copy and share. Here's an example URL:</p>
+<pre>
+<code class="language-html">https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&amp;homepage=home.md</code></pre><p>Docsify-This rendered web pages are perfect for embedding, with the ability to visually style Docsify-This pages to the destination platform.</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/docsify-this-rendered-markdown-file.webp" width="2083" height="1360" alt="Docsify-This rendered Markdown file">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Paul Hibbitts, CC BY-A 4.0)</p>
+</div>
+
+  </article>
+<h2 id="render">Render other files in the same repository</h2>
+<p>You can render other Markdown files in the same repository by directly editing the Docsify-This URL parameter <strong>homepage</strong>. For example:</p>
+<pre>
+<code class="language-html">https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&amp;homepage=anotherfile.md</code></pre><h2 id="appearance">Modify the web page's appearance</h2>
+<p>You can change the appearance of any Markdown file displayed in Docsify-This by using <a href="https://docsify-this.net/#/?id=page-appearance-url-parameters" target="_blank">URL parameters</a>. For example, <code>font-family</code>, <code>font-size</code>, <code>link-color</code>, and <code>line-height</code> are all common CSS attributes and are valid parameters for Docsify-This:</p>
+<pre>
+<code>https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&amp;homepage=home.md&amp;font-family=Open%20Sans,sans-serif</code></pre><p>You can also alter the visual appearance using a set of special <a href="https://docsify-this.net/#/?id=supported-markdown-css-classes" target="_blank">Markdown CSS classes</a>. For example, you can add the <code>button</code> class to a link:</p>
+<pre>
+<code class="language-text">[Required Reading Quiz due Jun 4th](https://canvas.sfu.ca/courses/44038/quizzes/166553 ':class=button')  </code></pre><p>This produces a button image instead of just a text link:</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/button.webp" width="612" height="84" alt="A button rendered by Docsify-This">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Paul Hibbitts, CC BY-A 4.0)</p>
+</div>
+
+  </article>
+<p>In addition to the Markdown CSS classes supported by Docsify-This, you can define your own custom classes within your displayed Markdown files. For example:</p>
+<pre>
+<code class="language-text">&lt;style&gt;
+.markdown-section .mybutton, .markdown-section .mybutton:hover {
+  cursor: pointer;
+  color: #CC0000;
+  height: auto;
+  display: inline-block;
+  border: 2px solid #CC0000;
+  border-radius: 4rem;
+  margin: 2px 0px 2px 0px;
+  padding: 8px 18px 8px 18px;
+  line-height: 1.2rem;
+  background-color: white;
+  font-family: -apple-system, "Segoe UI", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+&lt;/style&gt;
+
+[Custom CSS Class Button](# ':class=mybutton')</code></pre><p>Produces this:</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/custom-css-button.webp" width="528" height="86" alt="A custom button image rendered with Docsify-This">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Paul Hibbitts, CC BY-A 4.0)</p>
+</div>
+
+  </article>
+<h2 id="html-snippets">Include HTML snippets</h2>
+<p>As supported by standard Markdown, you can include HTML snippets. This allows you to add layout elements to your HTML render. For example:</p>
+<pre>
+<code class="language-html">&lt;div class="row"&gt;
+&lt;div class="column"&gt;
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+&lt;/div&gt;
+&lt;div class="column"&gt;
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+&lt;/div&gt;
+&lt;/div&gt;</code></pre><h2 id="iframe">Embed Docsify-This as an iFrame</h2>
+<p>You can embed Docsify-This web pages using an iFrame in almost any platform. You can also use URL parameters to ensure your embedded content matches your destination platform:</p>
+<pre>
+<code class="language-html">&lt;p&gt;&lt;iframe style="overflow: hidden; border: 0px #ffffff none; margin-top: -26px; background: #ffffff;" src="https://docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/cmpt-363-222-pages/main&amp;homepage=home.md&amp;font-family=Lato%20Extended,Lato,Helvetica%20Neue,Helvetica,Arial,sans-serif&amp;font-size=1&amp;hide-credits=true" width="800px" height="950px" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;&lt;/p&gt;</code></pre><article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/docsify-this-iframe.webp" width="2872" height="1484" alt="A Docsify-This page embedded in an LMS">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Paul Hibbitts, CC BY-A 4.0)</p>
+</div>
+
+  </article>
+<h2 id="external-url">Embed Docsify-This with an external URL</h2>
+<p>In certain learning management systems (LMS), including the open source <a href="https://opensource.com/article/21/3/moodle-plugins" target="_blank">Moodle</a>&nbsp;and even the proprietary <a href="https://github.com/instructure/canvas-lms" target="_blank">Canvas</a>, you can link external web pages to a course navigation menu and sometimes more. For example, you can use the Redirect Tool in Canvas to display Docsify-This web pages.</p>
+<pre>
+<code class="language-html">url=https://docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/cmpt-363-222-pages/main&amp;homepage=resources.md&amp;edit-link=https://github.com/paulhibbitts/cmpt-363-222-pages/blob/main/resources.md&amp;font-family=Lato%20Extended,Lato,Helvetica%20Neue, Helvetica,Arial,sans-serif&amp;font-size=1&amp;hide-credits=true</code></pre><p></p><div class="embedded-resource-list callout-float-right"> 
+                                <a href="#bottom-list" class="visually-hidden focusable skip-link">Skip to bottom of list</a>    <div data-analytics-region="sidebar">
+            <div class="field field--name-title field--type-string field--label-hidden field__item">Our favorite resources about open source</div>
+      
+      <div class="field field--name-links field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="https://opensource.com/downloads/cheat-sheet-git?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Git cheat sheet">Git cheat sheet</a></div>
+              <div class="field__item"><a href="https://developers.redhat.com/cheat-sheets/advanced-linux-commands/?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Advanced Linux commands cheat sheet">Advanced Linux commands cheat sheet</a></div>
+              <div class="field__item"><a href="https://opensource.com/tags/alternatives?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Open source alternatives">Open source alternatives</a></div>
+              <div class="field__item"><a href="https://www.redhat.com/en/services/training/rh024-red-hat-linux-technical-overview?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Free online course: RHEL technical overview">Free online course: RHEL technical overview</a></div>
+              <div class="field__item"><a href="https://console.redhat.com?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Register for your free Red Hat account">Register for your free Red Hat account</a></div>
+              <div class="field__item"><a href="https://opensource.com/downloads/cheat-sheets?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Check out more cheat sheets">Check out more cheat sheets</a></div>
+          </div>
+  </div>
+</div>
+                                <a id="bottom-list" tabindex="-1"></a>
+<h2 id="docsify-git">Integrate Docsify-This and Git</h2>
+<p>To fully leverage the benefits of version control and potentially collaboration using an optional <strong>Edit this Page</strong> link, store your Docsify-This Markdown pages in a Git repository on either Codeberg or GitHub. Several open source tools provide a graphical interface for Git, including <a href="https://github.com/desktop/desktop" target="_blank">GitHub Desktop</a> (recently released as open source), <a href="https://opensource.com/article/20/3/git-cola" target="_blank">Git-Cola</a>, and <a href="https://opensource.com/article/19/4/file-sharing-git" target="_blank">SparkleShare</a>. The text editors VSCode and Pulsar Edit (formerly <a href="https://opensource.com/article/20/12/atom" target="_blank">Atom.io</a>) both feature Git integration, too.</p>
+<p><strong>[ Get the <a href="https://opensource.com/downloads/git-tricks-tips" target="_blank">Git tips and tricks</a> eBook ]</strong></p>
+<h2 id="conclusion">Markdown publishing made easy</h2>
+<p>The benefits of Markdown-based publishing are available to everyone, thanks to Docsify. And thanks to Docsify-This, it's easier than ever. Try it out at the&nbsp;<a href="https://docsify-this.net" target="_blank">Docsify-This website</a>.</p>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-article-subhead field--type-text-long field--label-hidden field__item"><p>This open source tool makes it easier than ever to convert Markdown to web pages.</p>
+</div>
+      
+            <div class="field field--name-field-lead-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-caption">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/lead-images/browser_web_internet_website.png" width="1040" height="584" alt="Digital creative of a browser on the internet" title="Digital creative of a browser on the internet">
+
+</div>
+      
+  </article>
+</div>
+      
+      <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><a href="https://opensource.com/tags/web-development" hreflang="en">Web development</a></div>
+          </div>
+  
+            <div class="field field--name-field-listicle-title field--type-string field--label-hidden field__item">What to read next</div>
+      
+      <div class="field field--name-field-listicles field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><a href="https://opensource.com/article/23/4/open-source-design-system-patternfly" hreflang="en">5 best practices for PatternFly, an open source design system</a></div>
+              <div class="field__item"><a href="https://opensource.com/article/23/4/my-website-compromised" hreflang="en">How I learned the hard way to keep my website updated</a></div>
+          </div>
+  
+            <div class="field field--name-field-default-license field--type-list-string field--label-hidden field__item"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License" src="https://opensource.com/themes/osdc/assets/img/cc-by-sa-4.png" title="This work is licensed under a Creative Commons Attribution-Share Alike 4.0 International License."></a>This work is licensed under a Creative Commons Attribution-Share Alike 4.0 International License.</div>
+      <section id="comments" class="field field--name-field-comments field--type-comment field--label-hidden comment-wrapper">
+  
+
+  <div class="comments__count">
+                  <h2>Comments are closed.</h2>
+              <div class="login">These comments are closed.</div>
+  </div>
+
+  
+  
+</section>

@@ -1,0 +1,114 @@
+
+<p>There is no shortage of <a href="https://itsfoss.com/open-source-second-brain-apps/" rel="noreferrer">personal knowledge management (PKM) applications</a> available today if you <a href="https://itsfoss.com/markdown-guide/" rel="noreferrer">use Markdown</a> notes.</p><p>Be it <a href="https://itsfoss.com/comparison/obsidian-vs-logseq/" rel="noreferrer">Obsidian or Logseq</a> or Tolaria, there is a pain point associated with almost all of them. They add a layer on top of the plain markdown files. From Wikilinks to custom properties, there is always something that makes the interprotability an issue. </p><p>It almost feels like a vendor like in despite Markdown being an open standard.</p><p>Recently, I started experimenting with a different idea. Instead of relying on a specialized application, I tried using the KDE Plasma desktop itself as the foundation for this workflow.</p><p>Let me share how we can use Dolphin, along with a few KDE tools, to build a simple Markdown-based knowledge management system. I</p><p>t is still an experiment, and it certainly has limitations (that I will discuss later), but it has been an interesting workflow to explore.</p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">&#128679;</div><div class="kg-callout-text">This is a highly experimental topic, and you are essentially taking the entire burden of note taking, organizing and interlinking.</div></div><h2 id="create-some-templates">Create Some Templates</h2><p>The first step is to create a few Markdown templates that make taking notes faster.</p><p>Inside your <code>~/Templates</code> directory, create two files:</p><ul><li><code>Markdown.md</code></li><li><code>QuickNotes.md</code></li></ul><figure class="kg-card kg-video-card kg-width-regular kg-card-hascaption" data-kg-thumbnail="https://itsfoss.com/content/media/2026/07/create-an-empty-templates-file_thumb.jpg" data-kg-custom-thumbnail="">
+            <div class="kg-video-container">
+                <video src="https://itsfoss.com/content/media/2026/07/create-an-empty-templates-file.mp4" poster="https://img.spacergif.org/v1/996x552/0a/spacer.png" width="996" height="552" loop="" autoplay="" muted="" playsinline="" preload="metadata" style="background: transparent url('https://itsfoss.com/content/media/2026/07/create-an-empty-templates-file_thumb.jpg') 50% 50% / cover no-repeat;"></video>
+                <div class="kg-video-overlay">
+                    <button class="kg-video-large-play-icon" aria-label="Play video">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                            <path d="M23.14 10.608 2.253.164A1.559 1.559 0 0 0 0 1.557v20.887a1.558 1.558 0 0 0 2.253 1.392L23.14 13.393a1.557 1.557 0 0 0 0-2.785Z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="kg-video-player-container kg-video-hide">
+                    <div class="kg-video-player">
+                        <button class="kg-video-play-icon" aria-label="Play video">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <path d="M23.14 10.608 2.253.164A1.559 1.559 0 0 0 0 1.557v20.887a1.558 1.558 0 0 0 2.253 1.392L23.14 13.393a1.557 1.557 0 0 0 0-2.785Z"></path>
+                            </svg>
+                        </button>
+                        <button class="kg-video-pause-icon kg-video-hide" aria-label="Pause video">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <rect x="3" y="1" width="7" height="22" rx="1.5" ry="1.5"></rect>
+                                <rect x="14" y="1" width="7" height="22" rx="1.5" ry="1.5"></rect>
+                            </svg>
+                        </button>
+                        <span class="kg-video-current-time">0:00</span>
+                        <div class="kg-video-time">
+                            /<span class="kg-video-duration">0:13</span>
+                        </div>
+                        <input type="range" class="kg-video-seek-slider" max="100" value="0">
+                        <button class="kg-video-playback-rate" aria-label="Adjust playback speed">1&times;</button>
+                        <button class="kg-video-unmute-icon" aria-label="Unmute">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <path d="M15.189 2.021a9.728 9.728 0 0 0-7.924 4.85.249.249 0 0 1-.221.133H5.25a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1.794a.249.249 0 0 1 .221.133 9.73 9.73 0 0 0 7.924 4.85h.06a1 1 0 0 0 1-1V3.02a1 1 0 0 0-1.06-.998Z"></path>
+                            </svg>
+                        </button>
+                        <button class="kg-video-mute-icon kg-video-hide" aria-label="Mute">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <path d="M16.177 4.3a.248.248 0 0 0 .073-.176v-1.1a1 1 0 0 0-1.061-1 9.728 9.728 0 0 0-7.924 4.85.249.249 0 0 1-.221.133H5.25a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h.114a.251.251 0 0 0 .177-.073ZM23.707 1.706A1 1 0 0 0 22.293.292l-22 22a1 1 0 0 0 0 1.414l.009.009a1 1 0 0 0 1.405-.009l6.63-6.631A.251.251 0 0 1 8.515 17a.245.245 0 0 1 .177.075 10.081 10.081 0 0 0 6.5 2.92 1 1 0 0 0 1.061-1V9.266a.247.247 0 0 1 .073-.176Z"></path>
+                            </svg>
+                        </button>
+                        <input type="range" class="kg-video-volume-slider" max="100" value="100">
+                    </div>
+                </div>
+            </div>
+            <figcaption><p><span style="white-space: pre-wrap;">Create an empty templates file</span></p></figcaption>
+        </figure><p>Once these files are in the Templates folder, they become available from Dolphin's right-click context menu, allowing you to create new notes instantly.</p><p>Open <code>QuickNotes.md</code> in your preferred Markdown editor and add a simple structure such as:</p><pre><code>## Core Concept
+
+---
+
+## Key Characteristics
+
+---
+
+## Examples
+
+---
+
+## Related Reading
+
+---
+</code></pre><p>This is the template I use for quick notes, but you can customize it as per your need.</p><p>From now on, you can create a structured Markdown note anywhere in your file manager with just a few clicks.</p><h2 id="create-a-folder-for-your-notes">Create a Folder for Your Notes</h2><p>Next, create a folder that will hold your entire note collection.</p><p>I created mine as <code>~/Documents/MarkdownSource</code>, but you can choose any location you prefer.</p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">&#128679;</div><div class="kg-callout-text">Avoid spaces in file names. Spaces in files names can be a pain in Linux, speically when dealing with scripts in the command line.</div></div><p>Inside this folder, create sub-folders to organize notes. I also recommend creating two additional folders:</p><ul><li><strong>Inbox</strong>, for notes that you haven't organized into a dedicated folder, yet.</li><li><strong>Attachments</strong>, for images and other files that your notes may reference.</li></ul><p>Keeping attachments inside the root of your notes directory makes them much easier to manage later.Avoiding Vendor Lock-in By Using KDE Plasma As Personal Knowledge Base</p><h2 id="install-a-markdown-editor">Install a Markdown Editor</h2><p>Since this workflow revolves around plain Markdown files, you'll need a <a href="https://itsfoss.com/best-markdown-editors-linux/" rel="noreferrer">Markdown editor</a>.</p><p>I intentionally avoid recommending dedicated PKM applications such as Obsidian or Logseq here, because using one of those would defeat the purpose of this workflow.</p><p>I've tried the <a href="https://itsfoss.com/ghostwriter/" rel="noreferrer"><strong>Ghostwriter</strong></a> Markdown editor from KDE, and it has worked very well for this experiment. <a href="https://apps.gnome.org/Apostrophe/" rel="noreferrer">Apostrophe</a> is a similar editor, if you prefer a GNOME style application.</p><p>On Arch Linux, you can install it using:</p><pre><code>sudo pacman -S ghostwriter
+</code></pre><p>For other distros, use your package management commands.</p><h2 id="configure-dolphin-to-open-markdown-files">Configure Dolphin to Open Markdown Files</h2><p>Now make Ghostwriter the default application for Markdown files.</p><p>Open <strong>System Settings</strong> and navigate to <strong>Default Applications &rarr; File Associations</strong>.</p><p>Find the <strong>Markdown</strong> file type and move Ghostwriter to the top of the application list.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsfoss.com/content/images/2026/07/move-ghostwriter-to-top.png" class="kg-image" alt="In KDE System Settings, go to the File Association settings. Here, move the Ghostwriter app to the top of the list for Markdown files." loading="lazy" width="1375" height="765" srcset="https://itsfoss.com/content/images/size/w600/2026/07/move-ghostwriter-to-top.png 600w, https://itsfoss.com/content/images/size/w1000/2026/07/move-ghostwriter-to-top.png 1000w, https://itsfoss.com/content/images/2026/07/move-ghostwriter-to-top.png 1375w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">Ghostwriter for Markdown</span></figcaption></figure><p>This can also be done by right-click on a Markdown file, go top Properties. Here, select the <strong>open with</strong> option and change the application preference order in a similar interface as above.</p><p>From now on, double-clicking any Markdown file in Dolphin will open it directly in Ghostwriter.</p><h2 id="use-dolphin-tags-for-organization">Use Dolphin Tags for Organization</h2><p>Tagging is one of the most useful features in any PKM system. Without it, finding notes later becomes much more difficult.</p><p>Fortunately, Dolphin already <a href="https://itsfoss.com/file-tagging-kde/" rel="noreferrer">includes a simple tagging system</a>.</p><p>Open Dolphin and enable the information panel by selecting <strong>Menu &rarr; Show Panels &rarr; Information</strong>.</p><p>A sidebar will appear showing details about the selected file or folder.</p><p>Here you'll find a <strong>Tags</strong> field where you can assign one or more tags to each note.</p><figure class="kg-card kg-embed-card kg-card-hascaption"><iframe src="https://player.vimeo.com/video/1208314566?app_id=122963" width="426" height="234" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="adding-tags-in-dolphin"></iframe><figcaption><p><span style="white-space: pre-wrap;">Using Tags in Dolphin</span></p></figcaption></figure><p>Once you've tagged your files, Dolphin's search function can quickly locate notes that share the same tag.</p><figure class="kg-card kg-embed-card kg-card-hascaption"><iframe src="https://player.vimeo.com/video/1208318353?app_id=122963" width="398" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="tags-in-kde-plasma"></iframe><figcaption><p><span style="white-space: pre-wrap;">Using Tags in Dolphin</span></p></figcaption></figure><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">&#128203;</div><div class="kg-callout-text">Dolphin's tagging and file search features depend on the Baloo file indexing service. Make sure Baloo is installed and running before relying on tags for searching.</div></div><h2 id="interlinking-notes">Interlinking Notes</h2><p>We've now covered most of the essential parts of this workflow. The only major feature left is linking notes together.</p><p>This is one area where a file manager-based workflow is less convenient than a dedicated PKM application.</p><p>Since Dolphin doesn't understand wiki links or automatically manage relationships between notes, you'll need to create standard Markdown links yourself.</p><p>One improvement I would recommend is storing all your notes and attachments inside a single dedicated notes directory. Instead of using absolute file paths, create links using relative paths whenever possible.</p><p>Relative links are much easier to manage because the entire notes directory can be moved to another location without breaking the internal links, as long as the folder structure remains unchanged.</p><p>To make this easier, I created a small Bash function that generates the relative path between two files.</p><pre><code>relpath() {
+  local from_dir
+  from_dir=$(dirname "$(realpath "$1")")
+  realpath --relative-to="$from_dir" "$2"
+}
+</code></pre><p>I added this function to my <code>.bashrc</code>. I originally wrote this function for a terminal-based PKM workflow, but it fits this KDE-based workflow just as well.</p><p>Now, whenever I need to create a link from one note to another, I simply run:</p><pre><code>relpath current_file distant_file
+</code></pre><p>The command prints the relative path, which I can directly use in the Markdown link.</p><figure class="kg-card kg-video-card kg-width-regular kg-card-hascaption" data-kg-thumbnail="https://itsfoss.com/content/media/2026/07/get-relative-path_thumb.jpg" data-kg-custom-thumbnail="">
+            <div class="kg-video-container">
+                <video src="https://itsfoss.com/content/media/2026/07/get-relative-path.mp4" poster="https://img.spacergif.org/v1/1112x600/0a/spacer.png" width="1112" height="600" loop="" autoplay="" muted="" playsinline="" preload="metadata" style="background: transparent url('https://itsfoss.com/content/media/2026/07/get-relative-path_thumb.jpg') 50% 50% / cover no-repeat;"></video>
+                <div class="kg-video-overlay">
+                    <button class="kg-video-large-play-icon" aria-label="Play video">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                            <path d="M23.14 10.608 2.253.164A1.559 1.559 0 0 0 0 1.557v20.887a1.558 1.558 0 0 0 2.253 1.392L23.14 13.393a1.557 1.557 0 0 0 0-2.785Z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="kg-video-player-container kg-video-hide">
+                    <div class="kg-video-player">
+                        <button class="kg-video-play-icon" aria-label="Play video">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <path d="M23.14 10.608 2.253.164A1.559 1.559 0 0 0 0 1.557v20.887a1.558 1.558 0 0 0 2.253 1.392L23.14 13.393a1.557 1.557 0 0 0 0-2.785Z"></path>
+                            </svg>
+                        </button>
+                        <button class="kg-video-pause-icon kg-video-hide" aria-label="Pause video">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <rect x="3" y="1" width="7" height="22" rx="1.5" ry="1.5"></rect>
+                                <rect x="14" y="1" width="7" height="22" rx="1.5" ry="1.5"></rect>
+                            </svg>
+                        </button>
+                        <span class="kg-video-current-time">0:00</span>
+                        <div class="kg-video-time">
+                            /<span class="kg-video-duration">0:21</span>
+                        </div>
+                        <input type="range" class="kg-video-seek-slider" max="100" value="0">
+                        <button class="kg-video-playback-rate" aria-label="Adjust playback speed">1&times;</button>
+                        <button class="kg-video-unmute-icon" aria-label="Unmute">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <path d="M15.189 2.021a9.728 9.728 0 0 0-7.924 4.85.249.249 0 0 1-.221.133H5.25a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1.794a.249.249 0 0 1 .221.133 9.73 9.73 0 0 0 7.924 4.85h.06a1 1 0 0 0 1-1V3.02a1 1 0 0 0-1.06-.998Z"></path>
+                            </svg>
+                        </button>
+                        <button class="kg-video-mute-icon kg-video-hide" aria-label="Mute">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <path d="M16.177 4.3a.248.248 0 0 0 .073-.176v-1.1a1 1 0 0 0-1.061-1 9.728 9.728 0 0 0-7.924 4.85.249.249 0 0 1-.221.133H5.25a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h.114a.251.251 0 0 0 .177-.073ZM23.707 1.706A1 1 0 0 0 22.293.292l-22 22a1 1 0 0 0 0 1.414l.009.009a1 1 0 0 0 1.405-.009l6.63-6.631A.251.251 0 0 1 8.515 17a.245.245 0 0 1 .177.075 10.081 10.081 0 0 0 6.5 2.92 1 1 0 0 0 1.061-1V9.266a.247.247 0 0 1 .073-.176Z"></path>
+                            </svg>
+                        </button>
+                        <input type="range" class="kg-video-volume-slider" max="100" value="100">
+                    </div>
+                </div>
+            </div>
+            <figcaption><p><span style="white-space: pre-wrap;">Get relative path in terminal</span></p></figcaption>
+        </figure><p>A <a href="https://itsfoss.com/markdown-links/" rel="noreferrer">normal Markdown link</a> looks like this:</p><pre><code>[Link text](Link address)
+</code></pre><p>It's a manual process, but once the link is created, you can easily navigate between your notes from within your Markdown editor.</p><p>And this way, you have a folder containing subfolders of markdown files. The interlinking is the hardest and boring part but once that is done, your knowledge base can be used on any OS, with any Markdown editor.</p><h2 id="it-is-not-perfect-obviously">It Is Not Perfect (Obviously)</h2><p>And that's not a surprise. You are not using a specialist tool so there are a few limitations worth knowing.</p><h3 id="strict-data-organization-is-needed">Strict Data Organization Is Needed</h3><p>With this approach, your desktop environment effectively becomes your knowledge management system.</p><p>That also means you are entirely responsible for keeping your notes organized.</p><p>If you don't maintain a clear folder structure, your note collection can quickly become difficult to manage.</p><p>For example, a note may contain links to attachments stored in completely different folders. Without a consistent organization strategy, finding those files later can become frustrating.</p><p>Similarly, if you are linking notes to a PDF file, keep those files organized in a folder and don't mess up with its location. Else, interlinking won't work.</p><h3 id="distro-and-desktop-environment-changes">Distro and Desktop Environment Changes</h3><p>This workflow is tied to KDE Plasma's tagging feature. Moving away from KDE Plasma would likely mean abandoning parts of this workflow altogether.</p><h3 id="link-fragility">Link Fragility</h3><p>You probably have already realized that this is the weakest link in the entire workflow.</p><p>The Markdown links point directly to file paths. If you rename or move a file or folder later, every note pointing to that location will break.</p><p>Unlike dedicated PKM applications, Dolphin doesn't automatically update links when files are moved. Any reorganization requires manually updating the affected links yourself and that would be a serious pain.</p><h2 id="wrapping-up">Wrapping Up</h2><p>I know this approach is far from perfect. Compared to dedicated PKM applications, it places much more responsibility on you to organize your notes, attachments, and folder structure properly.</p><p>Personally, I think that's not necessarily a bad thing.</p><p>When you organize your notes yourself, you naturally become more familiar with your knowledge base. You're more likely to revisit, reorganize, and improve your notes over time instead of treating them as something you write once and never look at again.</p><p>At the same time, this workflow won't suit everyone.</p><p>If you depend on advanced features such as automatic backlinks, graph views, embedded queries, or seamless note linking, a dedicated PKM application will provide a much better experience.</p><p>On the other hand, if your priority is to keep everything as plain Markdown files while using lightweight tools that are already available on your desktop, this approach is certainly worth trying. In my opinion, this workflow also works well for people following the <a href="https://zettelkasten.de/introduction/">Zettelkasten method</a>.</p><p>I'm still experimenting with this workflow myself, and I'll probably continue refining it as I use it more.</p><p>What do you think about this idea? Would you consider using your file manager as a personal knowledge management system, or would you rather stick with a dedicated application? Let me know your thoughts in the comments.</p>
+<img src="https://feed.itsfoss.com/link/24361/17375459.gif" height="1" width="1"/>

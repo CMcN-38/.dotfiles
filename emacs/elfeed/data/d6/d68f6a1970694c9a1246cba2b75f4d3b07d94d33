@@ -1,0 +1,97 @@
+<span class="field field--name-title field--type-string field--label-hidden">3 reasons to host a docathon for your open source project</span>
+<span class="field field--name-uid field--type-entity-reference field--label-hidden"><a title="View user profile." href="https://opensource.com/users/lmalivert" class="username">lmalivert</a></span>
+<span class="field field--name-created field--type-created field--label-hidden"><time datetime="2023-04-28T03:00:00-04:00" title="Friday, April 28, 2023 - 03:00" class="datetime">Fri, 04/28/2023 - 03:00</time>
+</span>
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Your open source project's documentation is essential to your customers. Your target audience must understand the purpose of your project and how to use it, and documentation is what bridges that gap. A project is rarely ever truly done, so it's equally important for resources to be maintained and updated with your project's continuous improvement.</p>
+<p>But what happens when you have lots of documentation to maintain but lack the resources to keep it current? The answer is pretty simple: Host a docathon!</p>
+<h2 id="what-docathon">What is a docathon?</h2>
+<p>A docathon is like a hackathon. A hackathon is an event where engineers and community leaders gather to improve or add new features to an existing application. In a docathon, the same kind of collaboration focuses on improving documentation.</p>
+<p><strong>[ Learn about writing&nbsp;<a href="https://opensource.com/article/22/10/docs-as-code" target="_blank">Docs as Code</a>. ]</strong></p>
+<p>A docathon can fill gaps within content, restructure large documentation sets, fix broken links, or just correct typos. The intent behind hosting a docathon is to improve a large amount of documentation in a relatively brief timeframe.</p>
+<p>Some examples of product documentation include:</p>
+<ul>
+<li>Training manuals</li>
+<li>User manuals</li>
+<li>Installation guides</li>
+<li>Troubleshooting guides</li>
+<li>Quickstart guides</li>
+<li><a href="https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces?intcmp=7013a000002qLH8AAM" target="_blank">API</a> documentation</li>
+<li>Tutorials</li>
+</ul>
+<p>At my organization, our documentation team hosted a docathon and successfully revamped a 102-page installation guide. The docathon enabled us to focus on the project's scope, which was reorganizing for simplicity, removing duplicate content, and following the customer journey. Hosting a docathon left a lasting impression on my team and improved customer success.</p>
+<p><strong>[ Read&nbsp;<a href="https://opensource.com/article/23/3/community-documentation" target="_blank">Write documentation that actually works for your community</a> ]</strong></p>
+<h2 id="docathon-reasons">3 things you can achieve with a docathon</h2>
+<p>Here are my top three reasons to host a docathon:</p>
+<h3 id="backlog">1. No more backlog</h3>
+<p>Most documentation must evolve along with the product it supports. As the product changes or updates, so must the documentation. In some cases, documentation teams release new versions of their documentation alongside the engineering team's release cycle. As priorities within a team change and <a href="https://opensource.com/article/19/7/what-golden-image" target="_blank">GA releases</a> continue, documentation teams face the challenge of keeping up with new features, bug fixes, and tasks to complete. The changes that get left behind become part of a backlog—an accumulation of work that needs to be completed at a later time.</p>
+<blockquote><p><strong>Docathon tip:&nbsp;</strong>During a docathon, participants can triage backlog items and complete them as they progress through the list. Non-technical participants can work on fixes related to typos, broken links, and other text-related issues.</p>
+</blockquote>
+<p></p><div class="embedded-resource-list callout-float-right"> 
+                                <a href="#bottom-list" class="visually-hidden focusable skip-link">Skip to bottom of list</a>    <div data-analytics-region="sidebar">
+            <div class="field field--name-title field--type-string field--label-hidden field__item">Our favorite resources about open source</div>
+      
+      <div class="field field--name-links field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="https://opensource.com/downloads/cheat-sheet-git?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Git cheat sheet">Git cheat sheet</a></div>
+              <div class="field__item"><a href="https://developers.redhat.com/cheat-sheets/advanced-linux-commands/?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Advanced Linux commands cheat sheet">Advanced Linux commands cheat sheet</a></div>
+              <div class="field__item"><a href="https://opensource.com/tags/alternatives?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Open source alternatives">Open source alternatives</a></div>
+              <div class="field__item"><a href="https://www.redhat.com/en/services/training/rh024-red-hat-linux-technical-overview?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Free online course: RHEL technical overview">Free online course: RHEL technical overview</a></div>
+              <div class="field__item"><a href="https://console.redhat.com?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Register for your free Red Hat account">Register for your free Red Hat account</a></div>
+              <div class="field__item"><a href="https://opensource.com/downloads/cheat-sheets?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Check out more cheat sheets">Check out more cheat sheets</a></div>
+          </div>
+  </div>
+</div>
+                                <a id="bottom-list" tabindex="-1"></a>
+<h3 id="update-docs">2. Revamp large-scale guides</h3>
+<p>By the time your documentation team realizes it's time to revamp a guide, it's probably several chapters in and hundreds of pages deep. Once the content plan has been developed, the complexity of restructuring begins. Restructuring a large amount of documentation is not for the faint of heart.</p>
+<blockquote><p><strong>Docathon tip:</strong>&nbsp;Assemble a team to lead the docathon and provide incentives for organization-wide participation from different teams or departments. Depending on the scope of work and time constraints, your team can successfully restructure an entire guide in less time than you probably expect.</p>
+</blockquote>
+<h3 id="collaboration">3. Collaboration between cross-functional teams</h3>
+<p>It is common for different groups within an organization to work in isolation. Engineering, product, customer support, marketing, and documentation teams may not collaborate on projects as often as they should.</p>
+<p>Imagine hosting an event where each team member can use their expertise to improve product documentation. Docathons foster subject matter expert (SME) diversity, real-time collaboration, and communication. They also allow for an inclusive environment where individuals residing in different geographical locations can participate in person or remotely. Your documentation receives the undivided attention of experts with different viewpoints and specializations, minimizing isolated siloes, unconscious bias, and burnout.</p>
+<blockquote><p><strong>Docathon tip:</strong>&nbsp;Enable cross-functional teams to come together for a common cause.</p>
+</blockquote>
+<p><strong>[ Learn what it takes to <a href="https://www.redhat.com/en/resources/build-a-resilient-it-culture-ebook?intcmp=7013a000002qLH8AAM" target="_blank">build a resilient IT culture</a> ]</strong></p>
+<h2 id="conclusion">Documentation marathon</h2>
+<p>The next time your team has a seemingly insurmountable backlog or is tasked with restructuring a huge documentation project, consider hosting a docathon. It's easy, and its productivity may surprise you. For more information on hosting an event like this, read Tiffany Long's excellent <a href="https://opensource.com/downloads/hackathon-guide?intcmp=7013a000002qLH8AAM" target="_blank">10-step guide to hosting a hackathon</a>.</p>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-article-subhead field--type-text-long field--label-hidden field__item"><p>A marathon for documentation is a great way to produce or improve the docs for your open source project.</p>
+</div>
+      
+            <div class="field field--name-field-lead-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-caption">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/lead-images/files_documents_paper_folder.png" width="1041" height="584" alt="Files in a folder" title="Files in a folder">
+
+</div>
+      
+  </article>
+</div>
+      
+      <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><a href="https://opensource.com/tags/documentation" hreflang="en">Documentation</a></div>
+              <div class="field__item"><a href="https://opensource.com/tags/conferences-and-events" hreflang="en">Conferences and events</a></div>
+          </div>
+  
+            <div class="field field--name-field-listicle-title field--type-string field--label-hidden field__item">What to read next</div>
+      
+      <div class="field field--name-field-listicles field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><a href="https://opensource.com/article/22/8/writing-project-documentation-html" hreflang="en">Writing project documentation in HTML</a></div>
+              <div class="field__item"><a href="https://opensource.com/article/22/12/dynamic-documentation-javascript" hreflang="en">Improve your documentation with JavaScript</a></div>
+              <div class="field__item"><a href="https://opensource.com/article/22/12/markup-languages-documentation" hreflang="en">Our favorite markup languages for documentation</a></div>
+          </div>
+  
+            <div class="field field--name-field-default-license field--type-list-string field--label-hidden field__item"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License" src="https://opensource.com/themes/osdc/assets/img/cc-by-sa-4.png" title="This work is licensed under a Creative Commons Attribution-Share Alike 4.0 International License."></a>This work is licensed under a Creative Commons Attribution-Share Alike 4.0 International License.</div>
+      <section id="comments" class="field field--name-field-comments field--type-comment field--label-hidden comment-wrapper">
+  
+
+  <div class="comments__count">
+                  <h2>Comments are closed.</h2>
+              <div class="login">These comments are closed.</div>
+  </div>
+
+  
+  
+</section>

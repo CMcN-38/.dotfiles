@@ -1,0 +1,393 @@
+<span class="field field--name-title field--type-string field--label-hidden">Run a virtual conference using only open source tools</span>
+<span class="field field--name-uid field--type-entity-reference field--label-hidden"><a title="View user profile." href="https://opensource.com/users/mairin" class="username">mairin</a></span>
+<span class="field field--name-created field--type-created field--label-hidden"><time datetime="2023-04-27T03:00:00-04:00" title="Thursday, April 27, 2023 - 03:00" class="datetime">Thu, 04/27/2023 - 03:00</time>
+</span>
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="https://fedoraproject.org/wiki/Design" target="_blank">The Fedora Design Team</a> discovered that using open source tools to run a virtual conference can be quite effective by hosting the first <a href="http://creativefreedomsummit.com/" target="_blank">Creative Freedom Summit</a> in January 2023.</p>
+<p>In this article, I'll share some background on the conference, why using open source tools to run it was important to us, and the specific tools and configurations our team used to make it all work. I'll also talk about what worked well and what will need improvement at our next summit in 2024.</p>
+<h2>What is Creative Freedom Summit?</h2>
+<p>The Creative Freedom Summit was an idea Marie Nordin came up with after reviewing talk submissions for <a href="http://flocktofedora.org/" target="_blank">Flock, the annual Fedora users and contributors conference</a>. She received many talk submissions for the August 2022 Flock relating to design and creativity in open source—far more than we could possibly accept. With so many great ideas for open source design-related talks out there, she wondered if there would be space for a separate open source creativity conference focused on creatives who use open source tools to produce their work.</p>
+<p>Marie brought this idea to the Fedora Design Team in the fall of 2022, and we started planning the conference, which took place January 17-19, 2023. Since it was our first time running a new conference like this, we decided to start with invited speakers based on some of the Flock submissions and our own personal network of open source creatives. Almost every speaker we asked gave a talk, so we didn't have room to accept submissions. We will need to figure out this next year, so we don't have an open source CFP (Call for Papers) management tool for that to tell you about yet.</p>
+<p></p><div class="embedded-resource-list callout-float-right"> 
+                                <a href="#bottom-list" class="visually-hidden focusable skip-link">Skip to bottom of list</a>    <div data-analytics-region="sidebar">
+            <div class="field field--name-title field--type-string field--label-hidden field__item">More Linux resources</div>
+      
+      <div class="field field--name-links field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="https://developers.redhat.com/cheat-sheets/linux-commands-cheat-sheet/?intcmp=70160000000h1jYAAQ" data-analytics-category="resource list" data-analytics-text="Linux commands cheat sheet">Linux commands cheat sheet</a></div>
+              <div class="field__item"><a href="https://developers.redhat.com/cheat-sheets/advanced-linux-commands/?intcmp=70160000000h1jYAAQ" data-analytics-category="resource list" data-analytics-text="Advanced Linux commands cheat sheet">Advanced Linux commands cheat sheet</a></div>
+              <div class="field__item"><a href="https://www.redhat.com/en/services/training/rh024-red-hat-linux-technical-overview?intcmp=70160000000h1jYAAQ" data-analytics-category="resource list" data-analytics-text="Free online course: RHEL technical overview">Free online course: RHEL technical overview</a></div>
+              <div class="field__item"><a href="https://opensource.com/downloads/cheat-sheet-networking?intcmp=70160000000h1jYAAQ" data-analytics-category="resource list" data-analytics-text="Linux networking cheat sheet">Linux networking cheat sheet</a></div>
+              <div class="field__item"><a href="https://opensource.com/downloads/cheat-sheet-selinux?intcmp=70160000000h1jYAAQ" data-analytics-category="resource list" data-analytics-text="SELinux cheat sheet">SELinux cheat sheet</a></div>
+              <div class="field__item"><a href="https://opensource.com/downloads/linux-common-commands-cheat-sheet?intcmp=70160000000h1jYAAQ" data-analytics-category="resource list" data-analytics-text="Linux common commands cheat sheet">Linux common commands cheat sheet</a></div>
+              <div class="field__item"><a href="https://opensource.com/resources/what-are-linux-containers?intcmp=70160000000h1jYAAQ" data-analytics-category="resource list" data-analytics-text="What are Linux containers?">What are Linux containers?</a></div>
+              <div class="field__item"><a href="https://console.redhat.com?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Register for your free Red Hat account">Register for your free Red Hat account</a></div>
+              <div class="field__item"><a href="https://opensource.com/tags/linux?intcmp=70160000000h1jYAAQ" data-analytics-category="resource list" data-analytics-text="Our latest Linux articles">Our latest Linux articles</a></div>
+          </div>
+  </div>
+</div>
+                                <a id="bottom-list" tabindex="-1"></a>
+<h2>Using open source for open source conferences</h2>
+<p>Since the initial COVID pandemic lockdowns, Fedora's Flock conference has been run virtually using Hopin, an online conference platform that isn't open source but is friendly to open source tools. Fedora started using it some years ago, and it definitely provides a professional conference feel, with a built-in sponsor booth/expo hall, tracks, hallway chat conversations, and moderation tools. Running the Creative Freedom Summit using Hopin was an option for us because, as a Fedora-sponsored event, we could access Fedora's Hopin setup. Again, Hopin is not open source.</p>
+<p>Now, as a long-term (~20 years) open source contributor, I can tell you that this kind of decision is always tough. If your conference focuses on open source, using a proprietary platform to host your event feels a little strange. However, as the scale and complexity of our communities and events have grown, the ability to produce an integrated open source conference system has become more challenging.</p>
+<p>There is no right or wrong answer. You have to weigh a lot of things when making this decision:</p>
+<ul>
+<li>Budget</li>
+<li>People power</li>
+<li>Infrastructure</li>
+<li>Technical capability</li>
+<li>Complexity/formality/culture of the event</li>
+</ul>
+<p>We didn't have any budget for this event. We did have a team of volunteers who could put some work hours into it. We had the Fedora Matrix Server as a piece of supported infrastructure we could bring into the mix and access to a hosted WordPress system for the website. Teammate Madeline Peck and I had the technical capability/experience of running the live, weekly Fedora Design Team <a href="https://opensource.com/article/23/3/video-templates-inkscape" target="_blank">video calls</a> using PeerTube. We wanted the event to be low-key, single-track, and informal, so we had some tolerance for glitches or rough edges. We also all had a lot of passion for trying an open source stack.</p>
+<p>Now you know a little about our considerations when making this decision, which might help when making decisions for your event.</p>
+<h2>An open source conference stack</h2>
+<p>Here is how the conference tech stack worked.</p>
+<h3>Overview</h3>
+<p><strong>Live components</strong></p>
+<ul>
+<li><strong>Livestream</strong>: We streamed the stage and the social events to a PeerTube channel. Conference attendees could watch the stream live from our PeerTube channel. PeerTube includes some privacy-minded analytics to track the number of livestream viewers and post-event views.</li>
+<li><strong>Live stage + social event room</strong>: We had one live stage for speakers and hosts using Jitsi, ensuring only those with permission could be on camera. We had an additional Jitsi meeting room for social events that allowed anyone who wanted to participate in the social event to go on camera.</li>
+<li><strong>Backstage</strong>: We had a "Backstage" Matrix channel to coordinate with speakers, hosts, and volunteers in one place while the event was going on.</li>
+<li><strong>Announcements and Q&amp;A</strong>: We managed Q&amp;A and the daily schedule for the conference via a shared Etherpad (which we later moved to Hackmd.io).</li>
+<li><strong>Integrated and centralized conference experience</strong>: Using Matrix's Element client, we embedded the livestream video and an Etherpad into a public Matrix room for the conference. We used attendance in the channel to monitor overall conference attendance. We had a live chat throughout the conference and took questions from audience members from the chat and the embedded Q&amp;A Etherpad.</li>
+<li><strong>Conference website</strong>: We had a beautifully-designed website created by Ryan Gorley hosted on WordPress, which had the basic information and links for how to join the conference, the dates/times, and the schedule.</li>
+</ul>
+<h3>Post-event components</h3>
+<ul>
+<li><strong>Post-event survey</strong>: We used the open source LimeSurvey system to send out a post-event survey to see how things went for attendees. I use some of the data from that survey in this article.</li>
+<li><strong>Post-event video editing and captioning</strong>: We didn't have a live captioning system for the conference, but as I was able, I typed live notes from talks into the channel, which attendees greatly appreciated. Post-event, we used Kdenlive (one of the tools featured in talks at the event) to edit the videos and generate captions.</li>
+<li><strong>Event recordings</strong>: PeerTube automagically posts livestream recordings to channels, making nearly instant recordings available for attendees for talks they may have missed.</li>
+</ul>
+<p>I'll cover some details next.</p>
+<h2>Livestream with PeerTube</h2>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/homepage.webp" width="1213" height="2048" alt="Screenshot showing the Creative Freedom Summit PeerTube channel, with the logo, a description of the event, and a set of video thumbnails">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p>We used the <a href="https://peertube.linuxrocks.online/c/creativefreedom/videos" target="_blank">LinuxRocks PeerTube platform</a> generously hosted by <a href="https://linuxrocks.online/" target="_blank">LinuxRocks.online</a> for the Creative Freedom Summit's livestream. PeerTube is a free and open source decentralized video platform that is also part of the Fediverse.</p>
+<p>One of the best features of PeerTube (that other platforms I am aware of don't have) is that after your livestream ends, you get a near-instant replay recording posted to your channel on PeerTube. Users in our chatroom cited this as a major advantage of the platform. If an attendee missed a session they were really interested in, they could watch it within minutes of that talk's end. It took no manual intervention, uploading, or coordination on the part of the volunteer organizing team to make this happen; PeerTube automated it for us.</p>
+<p>Here is how livestreaming with PeerTube works: You create a new livestream on your channel, and it gives you a livestreaming URL + a key to authorize streaming to the URL. This URL + key can be reused over and over. We configured it so that the recording would be posted to the channel where we created the livestreaming URL as soon as a livestream ended. Next, copy/paste this into Jitsi when you start the livestream. This means that you don't have to generate a new URL + key for each talk during the conference—the overhead of managing that for organizers would have been pretty significant. Instead, we could reuse the same URL + key shared in a common document among conference organizers (we each had different shifts hosting talks). Anyone on the team with access to that document could start the livestream.</p>
+<h3>How to generate the livestream URL + key in PeerTube</h3>
+<p>The following section covers generating the livestream URL + key in PeerTube, step-by-step.</p>
+<p><strong>1. Create stream video on PeerTube</strong></p>
+<p>Log into PeerTube, and click the <strong>Publish</strong> button in the upper right corner:</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/publish.png" width="221" height="114" alt="Screenshot of the PeerTube Publish button">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p><strong>2. Set options</strong></p>
+<p>Click on the <strong>Go live</strong> tab (fourth from the left) and set the following options:</p>
+<ul>
+<li>Channel: (The channel name you want the livestream to publish on)</li>
+<li>Privacy: Public</li>
+<li>Radio buttons: Normal live</li>
+</ul>
+<p>Then, select <strong>Go Live</strong>. (Don't worry, you won't really be going live quite yet, there is more data to fill in.)</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/go-live.png" width="1449" height="878" alt="Screenshot of the Go Live button in PeerTube">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p><strong>3. Basic info (don't click update yet)</strong></p>
+<p>First, fill out the <strong>Basic Info</strong> tab, then choose the <strong>Advanced Settings</strong> tab in the next step. Fill out the name of the livestream, description, add tags, categories, license, etc. Remember to publish after the transcoding checkbox is turned on.</p>
+<p>This ensures once your livestream ends, the recording will automatically post to your channel.</p>
+<p><strong>4. Advanced settings</strong></p>
+<p>You can upload a "standby" image that appears while everyone is watching the stream URL and waiting for things to start.</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/advdsettings.png" width="2232" height="875" alt="Screenshot of PeerTube Advanced Settings">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p>This is the standby image we used for the Creative Freedom Summit:</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/cfsbanner.png" width="1920" height="1080" alt="Screenshot of the Creative Freedom Summit banner">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p><strong>5. Start livestream on PeerTube</strong></p>
+<p>Select the <strong>Update</strong> button in the lower right corner. The stream will appear like this—it's in a holding pattern until you start streaming from Jitsi:</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/startlivestream.jpg" width="2543" height="1317" alt="Screenshot of starting the live stream on PeerTube">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p><strong>6. Copy/paste the livestream URL for Jitsi</strong></p>
+<p>This is the final step in PeerTube. Once the livestream is up, click on the <strong>…</strong> icon under the video and towards the right:</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/pasteURL.png" width="718" height="499" alt="Copy and paste the URL">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p>Select <strong>Display live information</strong>. You'll get a dialog like this:</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/liveinformation.png" width="925" height="566" alt="Screenshot of Display live information option">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p>You must copy both the live RTMP URL and the livestream key. Combine them into one URL and then copy/paste that into Jitsi.</p>
+<p>The following are examples from my test run of these two text blocks to copy:</p>
+<ul>
+<li>Live RTMP Url: <strong>rtmp://peertube.linuxrocks.online:1935/live</strong></li>
+<li>Livestream key: <strong>8b940f96-c46d-46aa-81a0-701de3c43c8f</strong></li>
+</ul>
+<p>What you'll need to paste into Jitsi is these two text blocks combined with a<strong> /</strong> between them, like so:</p>
+<p><strong>rtmp://peertube.linuxrocks.online:1935/live/8b940f96-c46d-46aa-81a0-701de3c43c8f</strong></p>
+<h2>Live stage + social event room: Jitsi</h2>
+<p>We used the free and open source hosted <a href="https://meet.jit.si/" target="_blank">Jitsi Meet</a> video conferencing platform for our "live stage." We created a Jitsi meeting room with a custom URL at <strong><a href="https://meet.jit.si">https://meet.jit.si</a></strong> and only shared this URL with speakers and meeting organizers.</p>
+<p>We configured the meeting with a lobby (this feature is available in meeting settings once you join your newly-created meeting room) so speakers could join a few minutes before their talk without fear of interrupting the presentation before theirs. (Our host volunteers let them in when the previous session finished.) Another option is to add a password to the room. We got by just by having a lobby configured. It did seem, upon testing, that the moderation status in the room wasn't persistent. If a moderator left the room, they appeared to lose moderator status and settings, such as the lobby setup. I kept the Jitsi room available and active for the entire conference by leaving it open on my computer. (Your mileage may vary on this aspect.)</p>
+<p>Jitsi has a built-in livestreaming option, where you can post a URL to a video service, and it will stream your video to that service. We had confidence in this approach because it is how we host and livestream weekly <a href="https://peertube.linuxrocks.online/c/fedora_design_live/videos" target="_blank">Fedora Design Team meetings</a>. For the Creative Freedom Summit, we connected our Jitsi Live Stage (for speakers and hosts) to <a href="https://peertube.linuxrocks.online/c/creativefreedom/videos" target="_blank">a channel on the Linux Rocks PeerTube</a>.</p>
+<p>Jitsi lets speakers share their screens to drive their own slides or live demos.</p>
+<h2>Livestreaming Jitsi to PeerTube</h2>
+<p>1. Join the meeting and click the <strong>…</strong> icon next to the red hangup button at the bottom of the screen.</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/moreactions.png" width="233" height="127" alt="Join the Jitsi meeting">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p>2. Select <strong>Start live stream</strong> from the pop-up menu.</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/startlivestream.png" width="233" height="674" alt="Screenshot of starting the live stream in Jitsi">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p>3. Copy/paste the PeerTube URL + key text</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/copypastekey.png" width="400" height="391" alt="Screenshot of copying and pasting the livestream key">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p>4. Listen for your Jitsi Robot friend</p>
+<p>A feminine voice will come on in a few seconds to tell you, "Live streaming is on." Once she sounds, smile! You're livestreaming.</p>
+<p>5. Stop the livestream</p>
+<p>This stops the PeerTube URL you set up from working, so repeat these steps to start things back up.</p>
+<h3>Jitsi tips</h3>
+<p><strong>Managing Recordings by turning the Jitsi stream on and off</strong></p>
+<p>We learned during the conference that it is better to turn the Jitsi stream off between talks so that you will have one raw recording file per talk posted to PeerTube. We let it run as long as it would the first day, so some recordings have multiple presentations in the same video, which made using the instant replay function harder for folks trying to catch up. They needed to seek inside the video to find the talk they wanted to watch or wait for us to post the edited version days or weeks later.</p>
+<p><strong>Preventing audio feedback</strong></p>
+<p>Another issue we figured out live during the event that didn't crop up during our tests was audio feedback loops. These were entirely my fault (sorry to everyone who attended). I was setting up the Jitsi/PeerTube links, monitoring the streams, and helping host and emcee the event. Even though I knew that once we went live, I needed to mute any PeerTube browser tabs I had open, I either had more PeerTube tabs open than I thought and missed one, or the livestream would autostart in my Element client (which I had available to monitor the chat). I didn't have an easy way to mute Element. In some of the speaker introductions I made, you'll see that I knew I had about 30 seconds before the audio feedback would start, so I gave very rushed/hurried intros.</p>
+<p>I think there are simpler ways to avoid this situation:</p>
+<ul>
+<li>Try to ensure your host/emcee is not also the person setting up/monitoring the streams and chat. (Not always possible, depending on how many volunteers you have at any given time.)</li>
+<li>If possible, monitor the streams on one computer and emcee from another. This way, you have one mute button to hit on the computer you're using for monitoring, and it simplifies your hosting experience on the other.</li>
+</ul>
+<p>This is something worth practicing and refining ahead of time.</p>
+<h2>Backstage: Element</h2>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/backstage.webp" width="838" height="304" alt="A screenshot showing three chat room listings in Element: Creative Freedom Summit with a white logo, Creative Freedom Summit Backstage with a black logo, and Creative Freedom Summit Hosts with an orange logo">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p>We set up a "Backstage" invite-only chat room a week or so before the conference started and invited all our speakers to it. This helped us ensure a couple of things:</p>
+<ul>
+<li>Our speakers were onboarded to Element/Matrix well before the event's start and had the opportunity to get help signing up if they had any issues (nobody did).</li>
+<li>We started a live communication channel with all speakers before the event so that we could send announcements/updates pretty easily.</li>
+</ul>
+<p>The channel served as a useful place during the event to coordinate transitions between speakers, give heads up about whether the schedule was running late, and in one instance, quickly reschedule a talk when one of our speakers had an emergency and couldn't make their original scheduled time.</p>
+<p>We also set up a room for hosts, but in our case, it was extraneous. We just used the backstage channel to coordinate. We found two channels were easy to monitor, but three were too many to be convenient.</p>
+<h2>Announcements and Q&amp;A: Etherpad/Hackmd.io</h2>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/hackmd.webp" width="1377" height="907" alt="Screenshot of an etherpad titled &quot;General information&quot; that has some info about the Creative Freedom Summit">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p>We set up a pinned widget in our main Element channel with general information about the event, including the daily schedule, code of conduct, etc. We also had a section per talk of the day for attendees to drop questions for Q&amp;A, which the host read out loud for the speaker.</p>
+<p>We found over the first day or two that some attendees were having issues with the Etherpad widget not loading, so we switched to an embedded hackmd.io document pinned to the channel as a widget, and that seemed to work a little better. We're not 100% sure what was going on with the widget loading issues, but we were able to post a link to the raw (non-embedded) link in the channel topic, so folks could get around any problems accessing it via the widget.</p>
+<h2>Integrated and centralized conference experience</h2>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/integratedexperience.webp" width="2035" height="1399" alt="A video feed is in the upper left corner, a hackmd.io announcement page in the upper right, and an active chat below.">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p>Matrix via Fedora's Element server was the single key place to go to attend the conference. Matrix chat rooms in Element have a widget system that allows you to embed websites into the chat room as part of the experience. That functionality was important for having our Matrix chat room serve as the central place to attend.</p>
+<p>We embedded the PeerTube livestream into the channel—you can see it in the screenshot above in the upper left. Once the conference was over, we could share a playlist of the unedited video replays playlist. Now that our volunteer project for editing the videos is complete, the channel has the playlist of edited talks in order.</p>
+<p>As discussed in the previous section, we embedded a hackmd.io note in the upper right corner to post the day's schedule, post announcements, and an area for Q&amp;A right in the pad. I had wanted to set up a Matrix bot to handle Q&amp;A, but I struggled to get one running. It might make for a cool project for next year, though.</p>
+<p>Conversations during the conference occurred right in the main chat under these widgets.</p>
+<p>There are a couple of considerations to make when using a Matrix/Element chat room as the central place for an online conference, such as:</p>
+<ul>
+<li>The optimal experience will be in the Element desktop client or a web browser on a desktop system. However, you can view the widgets in the Element mobile client (although some attendees struggled to discover this, the UI is less-than-obvious). Other Matrix clients may not be able to view the widgets.</li>
+<li>Attendees can easily DIY their own experience piecemeal if desired. Users not using the Element client to attend the conference reported no issues joining in on the chat and viewing the PeerTube livestream URL directly. We shared the livestream URL and the hackmd URL in the channel topic, making it accessible to folks who preferred not to run Element.</li>
+</ul>
+<h2>Website</h2>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/website.webp" width="1271" height="1290" alt="Screenshot showing the top of creativefreedomsummit.com, with the headline &quot;Create. Learn. Connect.&quot; against a blue and purple gradient background.">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p><a href="https://mastodon.social/@ryangorley" target="_blank">Ryan Gorley</a> developed the <a href="https://creativefreedomsummit.com/" target="_blank">Creative Freedom Summit website</a> using <a href="https://wordpress.com/" target="_blank">WordPress</a>. It is hosted by WPengine and is a one-pager with the conference schedule embedded from sched.org.</p>
+<h2>Post-event</h2>
+<h3>Post-event survey</h3>
+<p>We used the open source survey tool LimeSurvey. We sent it out within a week or two to attendees via the Element Chat channel and our PeerTube video channel to learn more about how we handled the event. The event organizers continue to meet regularly. One topic we focus on during these post-event meetings is developing the questions for the survey in a shared hackmd.io document. The following are some things we learned from the event that might be of interest to you in planning your own open source powered online conference:</p>
+<ul>
+<li>By far, most event attendees learned about the event from Mastodon and Twitter (together, covering 70% of respondents).</li>
+<li>33% of attendees used the Element desktop app to attend, and 30% used the Element Chat web app. So roughly 63% of attendees used the integrated Matrix/Element experience. The rest watched directly on PeerTube or viewed replays after.</li>
+<li>35% of attendees indicated they made connections with other creatives at the event via the chat, so the chat experience is pretty important to events if part of your goal is enabling networking and connections.</li>
+</ul>
+<h3>Captioning</h3>
+<p>During the event, we received positive feedback from participants who appreciated when another attendee live-captioned the talk in the chat and wished out loud for live captioning for better accessibility. While the stack outlined here did not include live captioning, there are open source solutions for it. One such tool is Live Captions, and Seth Kenlon covered it in an opensource.com article, <a href="https://opensource.com/article/23/2/live-captions-linux" target="_blank">Open source video captioning on Linux</a>. While this tool is meant for the attendee consuming the video content locally, we could potentially have a conference host running it and sharing it to the livestream in Jitsi. One way to do this is using the open source broadcasting tool <a href="https://obsproject.com/" target="_blank">OBS</a> so everyone watching the livestream could benefit from the captions.</p>
+<p>While editing the videos post-event, we discovered a tool built into <a href="https://kdenlive.org/" target="_blank">Kdenlive</a>, our open source video editor of choice, that generates and automatically places subtitles in the videos. There are basic instructions on how to do this in the <a href="https://docs.kdenlive.org/en/effects_and_compositions/speech_to_text.html" target="_blank">Kdenlive manual</a>. Fedora Design Team member Kyle Conway, who helped with the post-event video editing, put together a <a href="https://gitlab.com/groups/fedora/design/-/epics/23#video-captioning-and-handoff" target="_blank">comprehensive tutorial (including video instruction) on automatically generating and adding subtitles to videos in Kdenlive</a>. It is well worth the read and watch if you are interested in this feature.</p>
+<h3>Video editing volunteer effort</h3>
+<p>When the event was over, we rallied a group of volunteers from the conference Element channel to work together on editing the videos, including title cards and intro/outro music, and general cleanup. Some of our automatic replay recordings were split across two files or combined in one file with multiple other talks and needed to be reassembled or cropped down.</p>
+<p>We used a <a href="https://gitlab.com/groups/fedora/design/-/epics/23" target="_blank">GitLab epic to organize the work</a>, with an FAQ and call for volunteer help organized by skillset, with issues attached for each video needed. We had a series of custom labels we would set on each video so it was clear what state the video was in and what kind of help was needed. All the videos have been edited, and some need content written for their description area on the <a href="https://peertube.linuxrocks.online/c/creativefreedom/videos" target="_blank">Creative Freedom Summit channel</a>. Many have auto-generated subtitles that have not been edited for spelling mistakes and other corrections common with auto-generated text.</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/availablevideos_0.webp" width="915" height="522" alt="Screenshot of the list of videos needing editing help in GitLab">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Máirín Duffy, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p></p><div class="embedded-resource-list callout-float-right"> 
+                                <a href="#bottom-list" class="visually-hidden focusable skip-link">Skip to bottom of list</a>    <div data-analytics-region="sidebar">
+            <div class="field field--name-title field--type-string field--label-hidden field__item">Open multimedia and art resources</div>
+      
+      <div class="field field--name-links field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="https://www.redhat.com/sysadmin/music-video-linux-terminal?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Music and video at the Linux terminal">Music and video at the Linux terminal</a></div>
+              <div class="field__item"><a href="https://opensource.com/article/22/2/open-source-creative-apps?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="26 open source creative apps to try this year">26 open source creative apps to try this year</a></div>
+              <div class="field__item"><a href="https://www.redhat.com/en/open-source-stories?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Film series: Open Source Stories">Film series: Open Source Stories</a></div>
+              <div class="field__item"><a href="https://opensource.com/downloads/blender-hotkey-cheat-sheet?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Blender cheat sheet">Blender cheat sheet</a></div>
+              <div class="field__item"><a href="https://opensource.com/downloads/kdenlive-cheat-sheet?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Kdenlive cheat sheet">Kdenlive cheat sheet</a></div>
+              <div class="field__item"><a href="https://opensource.com/content/cheat-sheet-gimp?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="GIMP cheat sheet">GIMP cheat sheet</a></div>
+              <div class="field__item"><a href="https://console.redhat.com?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Register for your free Red Hat account">Register for your free Red Hat account</a></div>
+              <div class="field__item"><a href="https://opensource.com/tags/audio-and-music?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Latest audio and music articles">Latest audio and music articles</a></div>
+              <div class="field__item"><a href="https://opensource.com/tags/video-editing?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Latest video editing articles">Latest video editing articles</a></div>
+          </div>
+  </div>
+</div>
+                                <a id="bottom-list" tabindex="-1"></a>
+<p>We passed the videos around—the files could be quite large—by having volunteers download the raw video from the unedited recording on the main PeerTube channel for the Creative Freedom Summit. When they had an edited video ready to share, we had a private PeerTube account where they could upload it. Admins with access to the main channel's account periodically grabbed videos from the private account and uploaded them to the main account. Note that PeerTube doesn't have a system where multiple accounts have access to the same channel, so we had to engage in a bit of password sharing, which can be nerve-wracking. We felt this was a reasonable compromise to limit how many people had the main password but still enable volunteers to submit edited videos without too much hassle.</p>
+<h2>Ready to give it a try?</h2>
+<p>I hope this comprehensive description of how we ran the Creative Freedom Summit conference using an open source stack of tools inspires you to try it for your open source event. Let us know how it goes, and feel free to reach out if you have questions or suggestions for improvement! Our channel is at: <a href="https://matrix.to/#/#creativefreedom:fedora.im" target="_blank">https://matrix.to/#/#creativefreedom:fedora.im</a></p>
+<hr>
+<p><em>This article is adapted from <a href="https://blog.linuxgrrl.com/2023/04/10/run-an-open-source-powered-virtual-conference/" target="_blank">Run an open source-powered virtual conference</a> and is republished with permission.</em></p>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-article-subhead field--type-text-long field--label-hidden field__item"><p>Here's how to use open source tools to run your next virtual event.</p>
+</div>
+      
+            <div class="field field--name-field-lead-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-caption">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/lead-images/chat_video_conference_talk_team.png" width="1040" height="585" alt="Two people chatting via a video conference app" title="Two people chatting via a video conference app">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>Opensource.com</p>
+</div>
+
+  </article>
+</div>
+      
+      <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><a href="https://opensource.com/tags/conferences-and-events" hreflang="en">Conferences and events</a></div>
+              <div class="field__item"><a href="https://opensource.com/tags/tools" hreflang="en">Tools</a></div>
+          </div>
+  
+            <div class="hidden field field--name-field-listicle-title field--type-string field--label-hidden field__item">What to read next</div>
+      
+            <div class="field field--name-field-default-license field--type-list-string field--label-hidden field__item"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License" src="https://opensource.com/themes/osdc/assets/img/cc-by-sa-4.png" title="This work is licensed under a Creative Commons Attribution-Share Alike 4.0 International License."></a>This work is licensed under a Creative Commons Attribution-Share Alike 4.0 International License.</div>
+      <section id="comments" class="field field--name-field-comments field--type-comment field--label-hidden comment-wrapper">
+  
+
+  <div class="comments__count">
+                  <h2>Comments are closed.</h2>
+              <div class="login">These comments are closed.</div>
+  </div>
+
+  
+  
+</section>

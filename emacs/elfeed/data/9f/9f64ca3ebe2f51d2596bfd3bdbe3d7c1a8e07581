@@ -1,0 +1,251 @@
+<span class="field field--name-title field--type-string field--label-hidden">New developments at Opensource.com</span>
+<span class="field field--name-uid field--type-entity-reference field--label-hidden"><a title="View user profile." href="https://opensource.com/users/admin" class="username">admin</a></span>
+<span class="field field--name-created field--type-created field--label-hidden"><time datetime="2023-06-06T13:30:00-04:00" title="Tuesday, June 6, 2023 - 13:30" class="datetime">Tue, 06/06/2023 - 13:30</time>
+</span>
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>You may have noticed that it's been quiet here on Opensource.com lately. That's because there's a new project in the works, and while there aren't many specific details to announce yet, there's plenty to talk about. What better way to start than with the entire internet?</p>
+<h2>The internet, and top-level domains</h2>
+<p>You may know that the internet is a network. A network, by definition, is a group of connections. The term "internet" is in fact a portmanteau of "interconnected" and "network". The internet is a network of interconnected networks, and originally it consisted of two: The military network and the academic network. Once the internet got popular outside those two groups, it became apparent that different designations were needed to differentiate, say, a commercial entity from a charitable organization from a university or a governmental department.</p>
+<p>These designations are called top-level domains (TLD). There are many available today, but for a long time there were only a handful. The original TLDs remain popular, and you probably know that when you go to, for instance, a .<code>com</code> address, you're visiting a commercial site, but when you visit a <code>.org</code> address you're going to a non-profit website.</p>
+<h2>Open source is a network</h2>
+<p>Open source can be many things. It can be commercial, it can be non-profit, it can be academic, it can be cultural. No matter what form it takes, though, it's always a network. Sometimes (but not always) it's a network of computers, but most importantly it's a network of people. Whether people are gathering at a conference or a pub or in an <a href="https://opensource.com/education/16/3/mattermost-open-source-chat" target="_blank">online chat room</a>, open source is a community of people.</p>
+<p>The website Opensource.com has been supported by a commercial entity for 12 years. But the people (that's you and me) that make up the Opensource.com community aren't commercial entities, we're people.</p>
+<p>In one month, Opensource.com is going to resolve that bug. Stay tuned!</p>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-article-subhead field--type-text-long field--label-hidden field__item"><p>The community is hard at work on something new.</p>
+</div>
+      
+            <div class="field field--name-field-lead-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-caption">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-06/camylla-battani-ABVE1cyT7hk-unsplash.webp" width="960" height="640" alt="Hands in a circle">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>Image by <a href="https://unsplash.com/fr/@camylla93?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" rel="ugc">Camylla Battani</a></p>
+</div>
+
+  </article>
+</div>
+      
+            <div class="hidden field field--name-field-listicle-title field--type-string field--label-hidden field__item">What to read next</div>
+      
+            <div class="field field--name-field-default-license field--type-list-string field--label-hidden field__item"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License" src="https://opensource.com/themes/osdc/assets/img/cc-by-sa-4.png" title="This work is licensed under a Creative Commons Attribution-Share Alike 4.0 International License."></a>This work is licensed under a Creative Commons Attribution-Share Alike 4.0 International License.</div>
+      <section id="comments" class="field field--name-field-comments field--type-comment field--label-hidden comment-wrapper">
+  
+
+  <div class="comments__count">
+          <h2>4 Comments</h2>
+        <div class="login">These comments are closed.</div>
+  </div>
+
+    
+<article data-comment-user-id="14486" id="comment-220207" class="comment js-comment">
+    <mark class="hidden" data-comment-timestamp="1686313542"></mark>
+
+  <footer class="comment__meta">
+    <article class="media media--type-image media--view-mode-byline">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/styles/medium/public/osdc_default_avatar_1.png?itok=G0WcUo3c" width="100" height="100" alt="Avatar" title="Avatar" class="image-style-medium">
+
+
+</div>
+      
+  </article>
+
+    <div>
+      <div class="comment__submitted">
+        <a href="https://opensource.com/users/bbehrens">Bryan Behrenshausen</a> | June 9, 2023
+        <div class="rate-widget thumbsup"><form class="comment-content-220207-updown-rate-widget-0 vote-form" id="rate-widget-base-form" data-drupal-selector="comment-content-220207-updown-rate-widget-0" action="https://opensource.com/feed" method="post" accept-charset="UTF-8">
+    <div class="rate-widget-thumbs-up">
+    <div class="thumbsup-rating-wrapper rate-disabled" can-edit="false"><div class="form-item js-form-item form-type-radio js-form-type-radio form-item-value js-form-item-value form-disabled">
+  <label class="form-item js-form-item form-type-radio js-form-type-radio form-item-value js-form-item-value form-disabled rating-label thumbsup-rating-label thumbsup-rating-label-up vote-pending rate-thumbs-up-btn-up"><input twig-suggestion="rating-input" class="rating-input thumbsup-rating-input form-radio" data-drupal-selector="edit-value-1" disabled="disabled" type="radio" id="edit-value-1" name="value" value="1">
+</label>
+  </div>
+</div><input data-drupal-selector="form-hufvyi0v9tmbsmcgkqptqjtngwn8w81-702oedemxta" type="hidden" name="form_build_id" value="form-HuFvYI0v9TmBsMcGKqPtqjtNGwN8W81-702oEdEmXTA">
+<input data-drupal-selector="edit-comment-content-220207-updown-rate-widget-0" type="hidden" name="form_id" value="comment_content_220207_updown_rate_widget_0">
+<input class="thumbsup-rating-submit button button--primary js-form-submit form-submit" data-drupal-selector="edit-submit" data-disable-refocus="true" type="submit" id="edit-submit--2" name="op" value="Save">
+<div class="vote-result js-form-wrapper form-wrapper" data-drupal-selector="edit-result" id="edit-result"><div class="rate-widget-thumbs-up rate-score">
+            1 reader likes this.    </div>
+</div>
+
+    <div class="rate-score"></div>
+  </div>
+
+
+</form>
+</div>
+
+      </div>
+      <div class="content">
+        
+            <div class="clearfix text-formatted field field--name-comment-body field--type-text-long field--label-hidden field__item"><p>I, for one, continue to <a href="https://youtu.be/8lcUHQYhPTE" rel="ugc">welcome our non-commercial overlords</a>.  All best to the team working on these new developments, and many thanks for your endless diligence and patience. We appreciate you.</p>
+</div>
+      <drupal-render-placeholder callback="comment.lazy_builders:renderLinks" arguments="0=220207&amp;1=full&amp;2=en&amp;3=" token="RslAIEq3kFuLA3zOl2ZQttABezbjaHsUxc0ow1iDdjo"></drupal-render-placeholder>
+      </div>
+    </div>
+        
+  </footer>
+
+</article>
+
+  
+<article data-comment-user-id="15542" id="comment-220208" class="comment js-comment">
+    <mark class="hidden" data-comment-timestamp="1686330448"></mark>
+
+  <footer class="comment__meta">
+    <article class="media media--type-image media--view-mode-byline">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/styles/medium/public/osdc_default_avatar_1.png?itok=G0WcUo3c" width="100" height="100" alt="Avatar" title="Avatar" class="image-style-medium">
+
+
+</div>
+      
+  </article>
+
+    <div>
+      <div class="comment__submitted">
+        <a href="https://opensource.com/users/don-watkins">Don Watkins</a> | June 9, 2023
+        <div class="rate-widget thumbsup"><form class="comment-content-220208-updown-rate-widget-0 vote-form" id="rate-widget-base-form--2" data-drupal-selector="comment-content-220208-updown-rate-widget-0" action="https://opensource.com/feed" method="post" accept-charset="UTF-8">
+    <div class="rate-widget-thumbs-up">
+    <div class="thumbsup-rating-wrapper rate-disabled" can-edit="false"><div class="form-item js-form-item form-type-radio js-form-type-radio form-item-value js-form-item-value form-disabled">
+  <label class="form-item js-form-item form-type-radio js-form-type-radio form-item-value js-form-item-value form-disabled rating-label thumbsup-rating-label thumbsup-rating-label-up vote-pending rate-thumbs-up-btn-up"><input twig-suggestion="rating-input" class="rating-input thumbsup-rating-input form-radio" data-drupal-selector="edit-value-1-2" disabled="disabled" type="radio" id="edit-value-1--2" name="value" value="1">
+</label>
+  </div>
+</div><input data-drupal-selector="form-ycz3jwsxug3cs-gsr-7g5lzdieuuei7g7gh2mgrjxvc" type="hidden" name="form_build_id" value="form-yCZ3JwsXUG3CS-gsR_7G5lzdieUUeI7g7gH2mGRJXvc">
+<input data-drupal-selector="edit-comment-content-220208-updown-rate-widget-0" type="hidden" name="form_id" value="comment_content_220208_updown_rate_widget_0">
+<input class="thumbsup-rating-submit button button--primary js-form-submit form-submit" data-drupal-selector="edit-submit" data-disable-refocus="true" type="submit" id="edit-submit--4" name="op" value="Save">
+<div class="vote-result js-form-wrapper form-wrapper" data-drupal-selector="edit-result" id="edit-result--2"><div class="rate-widget-thumbs-up rate-score">
+            1 reader likes this.    </div>
+</div>
+
+    <div class="rate-score"></div>
+  </div>
+
+
+</form>
+</div>
+
+      </div>
+      <div class="content">
+        
+            <div class="clearfix text-formatted field field--name-comment-body field--type-text-long field--label-hidden field__item"><p>I agree with Bryan! Glad for the opportunity to grow this community and appreciative of your efforts. </p>
+</div>
+      <drupal-render-placeholder callback="comment.lazy_builders:renderLinks" arguments="0=220208&amp;1=full&amp;2=en&amp;3=" token="E8gRdz1GaADkM9e6rHCayb-ENzda_dHRhEQ3RwPjoPA"></drupal-render-placeholder>
+      </div>
+    </div>
+        
+  </footer>
+
+</article>
+
+  
+<article data-comment-user-id="12445" id="comment-220209" class="comment js-comment">
+    <mark class="hidden" data-comment-timestamp="1686544324"></mark>
+
+  <footer class="comment__meta">
+    <article class="media media--type-image media--view-mode-byline">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/styles/medium/public/osdc_default_avatar_1.png?itok=G0WcUo3c" width="100" height="100" alt="Avatar" title="Avatar" class="image-style-medium">
+
+
+</div>
+      
+  </article>
+
+    <div>
+      <div class="comment__submitted">
+        <a href="https://opensource.com/users/kattekrab">Donna Benjamin</a> | June 12, 2023
+        <div class="rate-widget thumbsup"><form class="comment-content-220209-updown-rate-widget-0 vote-form" id="rate-widget-base-form--3" data-drupal-selector="comment-content-220209-updown-rate-widget-0" action="https://opensource.com/feed" method="post" accept-charset="UTF-8">
+    <div class="rate-widget-thumbs-up">
+    <div class="thumbsup-rating-wrapper rate-disabled" can-edit="false"><div class="form-item js-form-item form-type-radio js-form-type-radio form-item-value js-form-item-value form-disabled">
+  <label class="form-item js-form-item form-type-radio js-form-type-radio form-item-value js-form-item-value form-disabled rating-label thumbsup-rating-label thumbsup-rating-label-up vote-pending rate-thumbs-up-btn-up"><input twig-suggestion="rating-input" class="rating-input thumbsup-rating-input form-radio" data-drupal-selector="edit-value-1-3" disabled="disabled" type="radio" id="edit-value-1--3" name="value" value="1">
+</label>
+  </div>
+</div><input data-drupal-selector="form-4k75x1eiix6-jqiondutqvhlbmrrfcuxatikf8pl3cy" type="hidden" name="form_build_id" value="form-4k75x1eIiX6_jqiondUtqvhLbmRRFCUxAtIkf8Pl3CY">
+<input data-drupal-selector="edit-comment-content-220209-updown-rate-widget-0" type="hidden" name="form_id" value="comment_content_220209_updown_rate_widget_0">
+<input class="thumbsup-rating-submit button button--primary js-form-submit form-submit" data-drupal-selector="edit-submit" data-disable-refocus="true" type="submit" id="edit-submit--6" name="op" value="Save">
+<div class="vote-result js-form-wrapper form-wrapper" data-drupal-selector="edit-result" id="edit-result--3"><div class="rate-widget-thumbs-up rate-score">
+            1 reader likes this.    </div>
+</div>
+
+    <div class="rate-score"></div>
+  </div>
+
+
+</form>
+</div>
+
+      </div>
+      <div class="content">
+        
+            <div class="clearfix text-formatted field field--name-comment-body field--type-text-long field--label-hidden field__item"><p>Colour me intrigued! Where might the curious learn more, or perhaps even contribute?</p>
+</div>
+      <drupal-render-placeholder callback="comment.lazy_builders:renderLinks" arguments="0=220209&amp;1=full&amp;2=en&amp;3=" token="-ijuF6Q8fHgkeiY0nO5dpHSTJ_dRr3G3XOInx9gTBVk"></drupal-render-placeholder>
+      </div>
+    </div>
+        
+  </footer>
+
+</article>
+
+  
+<article data-comment-user-id="30666" id="comment-220210" class="comment js-comment">
+    <mark class="hidden" data-comment-timestamp="1686575768"></mark>
+
+  <footer class="comment__meta">
+    <article class="media media--type-image media--view-mode-byline">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/styles/medium/public/osdc_default_avatar_1.png?itok=G0WcUo3c" width="100" height="100" alt="Avatar" title="Avatar" class="image-style-medium">
+
+
+</div>
+      
+  </article>
+
+    <div>
+      <div class="comment__submitted">
+        <a href="https://opensource.com/users/greg-p">Greg Pittman</a> | June 12, 2023
+        <div class="rate-widget thumbsup"><form class="comment-content-220210-updown-rate-widget-0 vote-form" id="rate-widget-base-form--4" data-drupal-selector="comment-content-220210-updown-rate-widget-0" action="https://opensource.com/feed" method="post" accept-charset="UTF-8">
+    <div class="rate-widget-thumbs-up">
+    <div class="thumbsup-rating-wrapper rate-disabled" can-edit="false"><div class="form-item js-form-item form-type-radio js-form-type-radio form-item-value js-form-item-value form-disabled">
+  <label class="form-item js-form-item form-type-radio js-form-type-radio form-item-value js-form-item-value form-disabled rating-label thumbsup-rating-label thumbsup-rating-label-up vote-pending rate-thumbs-up-btn-up"><input twig-suggestion="rating-input" class="rating-input thumbsup-rating-input form-radio" data-drupal-selector="edit-value-1-4" disabled="disabled" type="radio" id="edit-value-1--4" name="value" value="1">
+</label>
+  </div>
+</div><input data-drupal-selector="form-3kivbrdhhyualip9ip8hemlrwy-csquxg7nifdg-5sq" type="hidden" name="form_build_id" value="form-3kIVBrdhhyUALIp9ip8HemLRwy-CsQuXG7NIFDG_5SQ">
+<input data-drupal-selector="edit-comment-content-220210-updown-rate-widget-0" type="hidden" name="form_id" value="comment_content_220210_updown_rate_widget_0">
+<input class="thumbsup-rating-submit button button--primary js-form-submit form-submit" data-drupal-selector="edit-submit" data-disable-refocus="true" type="submit" id="edit-submit--8" name="op" value="Save">
+<div class="vote-result js-form-wrapper form-wrapper" data-drupal-selector="edit-result" id="edit-result--4"><div class="rate-widget-thumbs-up rate-score">
+            No readers like this yet.
+    </div>
+</div>
+
+    <div class="rate-score"></div>
+  </div>
+
+
+</form>
+</div>
+
+      </div>
+      <div class="content">
+        
+            <div class="clearfix text-formatted field field--name-comment-body field--type-text-long field--label-hidden field__item"><p>It's a nice thought that maybe opensource.com might be able to paraphrase Mark Twain and say, "The reports of my death are greatly exaggerated."</p>
+</div>
+      <drupal-render-placeholder callback="comment.lazy_builders:renderLinks" arguments="0=220210&amp;1=full&amp;2=en&amp;3=" token="9FKjAyJX8lT0sZwHd55OCsKgNR_ZSgLhBUKhD-p65sA"></drupal-render-placeholder>
+      </div>
+    </div>
+        
+  </footer>
+
+</article>
+
+
+  
+</section>

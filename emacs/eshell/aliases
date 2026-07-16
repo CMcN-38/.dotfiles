@@ -1,0 +1,20 @@
+# Aliases for emacs commands
+alias ff find-file $1
+
+# Aliases for standard shell commands to better emacs alts
+alias less view-file $1
+
+# Change "ls" to "exa"
+alias ls exa -al --color=always --group-directories-first $*
+alias la exa -a --color=always --group-directories-first $*
+alias ll exa -l --color=always --group-directories-first $*
+alias lt exa -aT --color=always --group-directories-first $*
+alias l. exa -a1 $* | grep "^\."
+
+# Merge Xresources
+alias merge xrdb -merge ~/.Xresources
+
+# Confirm before overwriting
+alias cp cp -i $1
+alias mv mv -i $1
+alias rm rm -i $1

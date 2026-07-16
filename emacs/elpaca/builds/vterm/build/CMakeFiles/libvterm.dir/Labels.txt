@@ -1,0 +1,13 @@
+# Target labels
+ libvterm
+# Source files and their labels
+/Users/cameronm.privacyhub/.config/emacs/elpaca/builds/vterm/build/CMakeFiles/libvterm
+/Users/cameronm.privacyhub/.config/emacs/elpaca/builds/vterm/build/CMakeFiles/libvterm.rule
+/Users/cameronm.privacyhub/.config/emacs/elpaca/builds/vterm/build/CMakeFiles/libvterm-complete.rule
+/Users/cameronm.privacyhub/.config/emacs/elpaca/builds/vterm/build/libvterm-prefix/src/libvterm-stamp/libvterm-build.rule
+/Users/cameronm.privacyhub/.config/emacs/elpaca/builds/vterm/build/libvterm-prefix/src/libvterm-stamp/libvterm-configure.rule
+/Users/cameronm.privacyhub/.config/emacs/elpaca/builds/vterm/build/libvterm-prefix/src/libvterm-stamp/libvterm-download.rule
+/Users/cameronm.privacyhub/.config/emacs/elpaca/builds/vterm/build/libvterm-prefix/src/libvterm-stamp/libvterm-install.rule
+/Users/cameronm.privacyhub/.config/emacs/elpaca/builds/vterm/build/libvterm-prefix/src/libvterm-stamp/libvterm-mkdir.rule
+/Users/cameronm.privacyhub/.config/emacs/elpaca/builds/vterm/build/libvterm-prefix/src/libvterm-stamp/libvterm-patch.rule
+/Users/cameronm.privacyhub/.config/emacs/elpaca/builds/vterm/build/libvterm-prefix/src/libvterm-stamp/libvterm-update.rule

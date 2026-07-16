@@ -1,0 +1,120 @@
+
+<p>Ever tried a DAS (Direct-Attached Storage) device? </p><p>Unlike NAS, where you have a bunch of hard drives available over network, DAS is directly connected to your computer.</p><p>I never used such a product because I never had the need. But then Orico sent me there new DAS 88 Series 4-Bay USB4 NVMe SSD Enclosure and I got the opportunity to use a DAS for the first time ever.</p><p>Sharing my experience and some benchmarking test that I did for the first time in several years.</p><h2 id="orico-8848u4-das-specification">Orico 8848U4 DAS Specification</h2><figure class="kg-card kg-image-card"><img src="https://itsfoss.com/content/images/2026/07/orico-das-side-3.webp" class="kg-image" alt="Orico DAS 8848U" loading="lazy" width="1200" height="676" srcset="https://itsfoss.com/content/images/size/w600/2026/07/orico-das-side-3.webp 600w, https://itsfoss.com/content/images/size/w1000/2026/07/orico-das-side-3.webp 1000w, https://itsfoss.com/content/images/2026/07/orico-das-side-3.webp 1200w" sizes="(min-width: 720px) 720px"></figure><p>Here's the quick hardware specifications for Orico 8848U DAS:</p>
+<!--kg-card-begin: html-->
+<table>
+<thead>
+<tr>
+<th>Spec</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model</td>
+<td>8848U4 USB4</td>
+</tr>
+<tr>
+<td>Drive Bays</td>
+<td>4 x M.2 NVMe (2230, 2242, 2260, 2280)</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>USB4 (40Gbps in total)</td>
+</tr>
+<tr>
+<td>RAID Support</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Max Capacity</td>
+<td>8TB per bay / 32TB total</td>
+</tr>
+<tr>
+<td>Cooling</td>
+<td>Aluminum body + built-in fan</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>12V/3A external adapter</td>
+</tr>
+<tr>
+<td>Expansion Ports</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Dimensions</td>
+<td>167 x 101 x 119.5 mm</td>
+</tr>
+<tr>
+<td>OS Support</td>
+<td>Windows, macOS, Linux</td>
+</tr>
+</tbody>
+</table>
+<!--kg-card-end: html-->
+<p>Do note that there is also a SATA version of DAS in the same 88 Series lineup. It is older, bigger and has a RAID mode. The version I tested is M.2 NVMe SSD only and without built-in RAID functionality. That's intentional to give you the raw NVMe speed in a compact form factor.</p><p>Do note that this is a diskless enclosure. You bring your own M.2 NVMe drives. You cannot expect to get enclosures with SSD disks for under $200 in this age of AI slop.</p><div class="kg-card kg-button-card kg-align-center"><a href="https://www.amazon.com/dp/B0F1CR71L4" class="kg-btn kg-btn-accent">Git it on Amazon</a></div><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">&#128176;</div><div class="kg-callout-text">Save additional 10% by using coupon code 7OS6995Z when you order it from Amazon. The code is valid till August 30, 2026.</div></div><h2 id="build-quality-and-design">Build Quality And Design</h2><p>The first thing I noticed is how good this thing looks. The CNC-machined aluminum body has a silver finish that would blend right into a Mac-heavy studio desk. I am a Linux person, not an Apple person, but I will admit the build quality is quite impressive. Feels solid. My Terramaster NAS also has silver-gray aluminium chasis but this one is more "Mac looking."</p><p>All the ports and controls are on the back. There is a USB4 Type-C port, 12V DC power input, a dedicated power button, and a cooling fan. </p><figure class="kg-card kg-image-card"><img src="https://itsfoss.com/content/images/2026/07/orico-das-back.webp" class="kg-image" alt="Orico DAS 8848U backside" loading="lazy" width="1200" height="676" srcset="https://itsfoss.com/content/images/size/w600/2026/07/orico-das-back.webp 600w, https://itsfoss.com/content/images/size/w1000/2026/07/orico-das-back.webp 1000w, https://itsfoss.com/content/images/2026/07/orico-das-back.webp 1200w" sizes="(min-width: 720px) 720px"></figure><p>The power button being on the back is a minor annoyance if the enclosure is tucked away. Worth planning your desk layout around it. The power button glows when pressed but difficult to look at it in the back. </p><p>The front has disk bay access with a slider button. It's a little bit stiff but not worth complaining about. The disk bay can host M.2 NVMe SSDs of various sizes. I only tested it with 2280 but guess that doesn't really matter.</p><p>The front also has 4 indicators at the bottom. They glow blue when the DAS is attached to a running computer.</p><figure class="kg-card kg-image-card"><img src="https://itsfoss.com/content/images/2026/07/orico-das-front.webp" class="kg-image" alt="Orico DAS 8848U front" loading="lazy" width="1200" height="676" srcset="https://itsfoss.com/content/images/size/w600/2026/07/orico-das-front.webp 600w, https://itsfoss.com/content/images/size/w1000/2026/07/orico-das-front.webp 1000w, https://itsfoss.com/content/images/2026/07/orico-das-front.webp 1200w" sizes="(min-width: 720px) 720px"></figure><p>Sides has nothing, just minimal branding.</p><p>The fan is there for active cooling, and ORICO claims it operates under 30dB. In my testing, the device felt completely silent. The fan does start running as soon as power is turned on but there is no audible noise unless you put your ear near the fan vent.</p><p>There is no fan speed control that I could find, which is a small omission. It would be nice to have a quiet mode toggle, but in practice it's a non-issue.</p><p>Keep in mind that the enclosure has no passthrough port. There is a single USB4 connection and that's about it. If you need to daisy-chain other Thunderbolt peripherals, this will consume your only port. On a laptop with limited Thunderbolt ports, this is something worth thinking about before buying.</p><h2 id="linux-compatibility">Linux Compatibility</h2><p>I noticed that the drive appeared as a native NVMe device. This means that each drive in the enclosure shows up as a separate NVMe namespace (nvme1p1, nvme1p2 etc) under a single controller.</p><pre><code class="language-bash">$ cat /sys/class/nvme/nvme1/transport
+pcie                             #output
+</code></pre><p>And this detail matters because it means that the Thunderbolt PCIe tunneling is working correctly. The OS treats these drives as if they are plugged directly into the motherboard's PCIe bus, not as USB devices. My <a href="https://amzn.to/4wuXUe7">Sandisk external SSD</a> comes up under /dev/sda that means it's treated as USB.</p><h2 id="performance-testing">Performance Testing</h2><p>I tested with a <a href="https://amzn.to/44SNzNg">Crucial CT500P3PSSD8</a> (P3 Plus 500GB NVMe) installed in one bay. I only had one drive available for testing. Rest of them were being used in <a href="https://itsfoss.com/zimacube-2-review/" rel="noreferrer">ZimaCube</a> and Terramaster NAS. I have to buy new NVMe SSDs but the prices are not coming down. I ran benchmarks using <a href="https://linux.die.net/man/1/fio">fio</a> and hdparm, and also timed some real-world file transfers.</p><h3 id="understanding-the-40gbps-claim">Understanding The "40Gbps" Claim</h3><p>It is easy to get excited with numbers but let's analyze the numbers. ORICO itself clarifies this in the product page: each drive achieves up to 10Gbps when all four bays are operating simultaneously. The 40Gbps is the total aggregate across all four drives. A single bay doesn't get 40Gbps.</p><p>In practice, even that 10Gbps per drive is rare achievement. Thunderbolt 4 tunnels PCIe 3.0 x4, which gives around 3500 MB/s of usable bandwidth total. Divided across four bays, each drive gets roughly 800-900 MB/s of real-world headroom. Mind the difference between bits and bytes.</p><p>My single-drive benchmarks came almost there, which indicates that the enclosure is performing exactly as it should. If I had 3 more spare SSDs, I would have tested the full 40Gbps claim.</p><h3 id="benchmark-results-ext4">Benchmark Results (ext4)</h3><p>I tested with two filesystem configurations. The reliable numbers come from the ext4 run, where direct I/O (O_DIRECT) was fully confirmed working with no cache assistance.</p>
+<!--kg-card-begin: html-->
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sequential Read</td>
+<td>729 MB/s</td>
+</tr>
+<tr>
+<td>Sequential Write</td>
+<td>669 MB/s</td>
+</tr>
+<tr>
+<td>Random 4K Read</td>
+<td>71 MiB/s / 18.2k IOPS</td>
+</tr>
+<tr>
+<td>Random 4K Write</td>
+<td>103 MB/s / 26.3k IOPS</td>
+</tr>
+<tr>
+<td>Raw device read (hdparm)</td>
+<td>763 MB/s</td>
+</tr>
+</tbody>
+</table>
+<!--kg-card-end: html-->
+<p>Sequential read at 729 MB/s and sequential write at 669 MB/s are pretty good numbers. Pretty close to the numbers I discussed earlier. That's the advantage of using NVMe over a PCIe tunnel. </p><h3 id="ntfs-vs-ext4">NTFS vs ext4</h3><p>Since the Crucial drive I installed was previously formatted as NTFS, I benchmarked it in that state before reformatting to ext4.</p>
+<!--kg-card-begin: html-->
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>NTFS</th>
+<th>ext4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sequential Read</td>
+<td>820 MB/s*</td>
+<td>729 MB/s</td>
+</tr>
+<tr>
+<td>Sequential Write</td>
+<td>231 MB/s</td>
+<td>669 MB/s</td>
+</tr>
+<tr>
+<td>Random 4K Write</td>
+<td>~2.3 MB/s</td>
+<td>103 MB/s</td>
+</tr>
+</tbody>
+</table>
+<!--kg-card-end: html-->
+<p>NTFS sequential read was partially served from <a href="https://medium.com/@xiaolongjiang/linux-fuse-file-system-performance-learning-efb23a1fb83f">OS cache due to FUSE limitations</a> and  thus it is not a reliable number. Don't think that NTFS is somehow better than ext4 ;)</p><p>The NTFS write performance is inconsistent. Sequential writes drop to 231 MB/s and random 4K writes fall to around 2.3 MB/s. </p><p>Mind that this is not the DAS's fault. Linux accesses NTFS through the ntfs-3g FUSE driver, which adds overhead, especially on small random writes. The raw device speed (hdparm on the block device directly, bypassing any filesystem) was virtually identical in both runs at around 764 MB/s, which confirms the ORICO hardware is not the bottleneck.</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">&#128203;</div><div class="kg-callout-text">If you plan on using this enclosure exclusively on Linux, format your drives in ext4 format for better write performance. If you need Windows compatibility, exFAT is a better choice than NTFS for Linux users, as it avoids the FUSE overhead while remaining readable on all operating systems.</div></div><h3 id="real-world-transfers">Real-World Transfers</h3><p>I am not a fan of bechmarking tests. They do not capture how the device actually feels to use. So I ran two practical tests.</p><p>Copying a 5GB 4K video file to the DAS took just over 4.5 seconds. </p><figure class="kg-card kg-image-card"><img src="https://itsfoss.com/content/images/2026/07/orico-das-real-world-copy-2.png" class="kg-image" alt="Orico DAS 8848U copy test" loading="lazy" width="1768" height="404" srcset="https://itsfoss.com/content/images/size/w600/2026/07/orico-das-real-world-copy-2.png 600w, https://itsfoss.com/content/images/size/w1000/2026/07/orico-das-real-world-copy-2.png 1000w, https://itsfoss.com/content/images/size/w1600/2026/07/orico-das-real-world-copy-2.png 1600w, https://itsfoss.com/content/images/2026/07/orico-das-real-world-copy-2.png 1768w" sizes="(min-width: 720px) 720px"></figure><p>A folder with nearly 2,800 photos and videos totaling 10.2GB transferred in under 12 seconds.</p><figure class="kg-card kg-image-card"><img src="https://itsfoss.com/content/images/2026/07/orico-das-real-world-copy-1.png" class="kg-image" alt="Orico DAS 8848U copy test" loading="lazy" width="1869" height="394" srcset="https://itsfoss.com/content/images/size/w600/2026/07/orico-das-real-world-copy-1.png 600w, https://itsfoss.com/content/images/size/w1000/2026/07/orico-das-real-world-copy-1.png 1000w, https://itsfoss.com/content/images/size/w1600/2026/07/orico-das-real-world-copy-1.png 1600w, https://itsfoss.com/content/images/2026/07/orico-das-real-world-copy-1.png 1869w" sizes="(min-width: 720px) 720px"></figure><p>Note that Linux buffers writes in RAM before flushing to disk in the background, so these numbers reflect the immediate user experience rather than sustained disk throughput. </p><h2 id="things-to-keep-in-mind">Things To Keep In Mind</h2><p>The no-passthrough situation is probably the biggest practical limitation but only if you need to daisy chain multiple devices and only have few thunderbolt ports available on your system.</p><p>No RAID support is by design here, but something to keep in mind if you were hoping for redundancy. </p><p>Fan control would be a nice addition, perhaps? The device was silent in my use, but there is no software or hardware toggle to set a fan curve or force it off. Definitely not a dealbreaker, just something I noticed.</p><p>Another thing to note is that there is not enough space for a heatsink since the device has a compact size.</p><p>Also note that for $219 you are buying a diskless enclosure. Four decent NVMe drives to fill it will cost a lot more. That's an obvious thing but I still would like to state that.</p><h2 id="who-is-this-for-really">Who Is This For Really?</h2><p>The primary userbase for something like this is video editors and creative professionals who are constantly moving large files. </p><p>If you are working with 4K or 8K footage across multiple projects, you'll have TBs of data and your internal SSD would fill up fast. A 4-bay NVMe DAS sitting on your desk gives you that additional storage without the latency of a NAS. You plug it in and it just works like local storage, because over Thunderbolt 4, it effectively is.</p><p>It is also a good fit for you if you already have a handful of spare NVMe drives sitting around from previous hardware upgrades. Instead of those drives collecting dust in a drawer, you slot them in here and have a fast, compact multi-terabyte storage pool at your desk.</p><p>That said, this is not for everyone. If you just need an extra 1 or 2TB of portable storage, a simple USB-C external SSD will do the job at a fraction of the cost and with far less desk space and will also be portable. A dedicated 4-bay DAS only makes sense when you need the multi-bay capacity.</p><p>Some NAS devices offer a feature called direct attach, where you plug the NAS directly into your computer over Thunderbolt and use it as local storage rather than over the network. <a href="https://www.zimaspace.com/products/cube-personal-cloud">ZimaCube</a> highlights this as a use case. </p><p>The difference here is that a NAS with decent specs will cost you significantly more than this DAS. If all you need is fast desk-side storage without the NAS software stack and network overhead, the ORICO DAS is a simpler and cheaper solution.</p><h2 id="conclusion">Conclusion</h2><p>As a Linux user, the experience was better than I expected. No driver issues, no special configuration needed. </p><p>The drive showed up as native NVMe devices and behaved like internal storage. Format to ext4 and you get fast sustained speeds in both directions. </p><p>Do evaluate your needs and if it fits, you can <a href="https://oricotechs.com/products/orico-88-series-4bay-usb4-nvme-ssd-enclosure">get it from its official website</a> or order it on Amazon: </p><div class="kg-card kg-button-card kg-align-center"><a href="https://amzn.to/4vVSysy" class="kg-btn kg-btn-accent">ORICO 88 Series 4-Bay USB4 NVMe SSD Enclosure on Amazon</a></div><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">&#128176;</div><div class="kg-callout-text">Save additional 10% by using coupon code 7OS6995Z when you order it from Amazon. The code is valid till August 30, 2026.</div></div>
+<img src="https://feed.itsfoss.com/link/24361/17374968.gif" height="1" width="1"/>

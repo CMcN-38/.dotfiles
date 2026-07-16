@@ -1,0 +1,247 @@
+<span class="field field--name-title field--type-string field--label-hidden">Test your Drupal website with Cypress</span>
+<span class="field field--name-uid field--type-entity-reference field--label-hidden"><a title="View user profile." href="https://opensource.com/users/cobadger" class="username">cobadger</a></span>
+<span class="field field--name-created field--type-created field--label-hidden"><time datetime="2023-04-26T03:00:00-04:00" title="Wednesday, April 26, 2023 - 03:00" class="datetime">Wed, 04/26/2023 - 03:00</time>
+</span>
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>If you don't include tests in your Drupal development, chances are it's because you think it adds complexity and expense without benefit. <a href="https://www.cypress.io/" target="_blank">Cypress</a> is an open source tool with many benefits:</p>
+<ul>
+<li>Reliably tests anything that runs in a web browser</li>
+<li>Works on any web platform (it's great for testing projects using front-end technologies like <a href="https://opensource.com/article/20/11/reactjs-tutorial" target="_blank">React</a>)</li>
+<li>Highly extensible</li>
+<li>Increasingly popular</li>
+<li>Easy to learn and implement</li>
+<li>Protects against regression as your projects become more complex</li>
+<li>Can make your development process more efficient</li>
+</ul>
+<p>This article covers three topics to help you start testing your Drupal project using Cypress:</p>
+<ol type="1">
+<li><a href="https://opensource.com/article/23/4/website-test-drupal-cypress#install-cypress">Installing Cypress</a></li>
+<li><a href="https://opensource.com/article/23/4/website-test-drupal-cypress#write-run">Writing and running basic tests using Cypress</a></li>
+<li><a href="https://opensource.com/article/23/4/website-test-drupal-cypress#customize-cypress">Customizing Cypress for Drupal</a></li>
+</ol>
+<h2 id="install-cypress">Install Cypress</h2>
+<p>For the purposes of this tutorial I'm assuming that you have built a local dev environment for your Drupal project using the `drupal/recommended-project` project. Although details on creating such a project are outside of the scope of this piece, I recommend&nbsp;<a data-saferedirecturl="https://www.google.com/url?q=https://www.specbee.com/blogs/getting-started-with-lando-and-drupal-9&amp;source=gmail&amp;ust=1682166790617000&amp;usg=AOvVaw1yMfzaJ_OGC0TLLv57DNlz" href="https://www.specbee.com/blogs/getting-started-with-lando-and-drupal-9" target="_blank">Getting Started with Lando and Drupal 9</a>.</p>
+<p>Your project has at least this basic structure:</p>
+<pre>
+<code class="language-bash">vendor/
+web/
+.editorconfig
+.gitattributes
+composer.json
+composer.lock</code></pre><p>The cypress.io site has <a href="https://docs.cypress.io/guides/getting-started/installing-cypress" target="_blank">complete installation instructions</a> for various environments. For this article, I installed Cypress using <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">npm</a>.</p>
+<p>Initialize your project using the command <code>npm init</code>. Answer the questions that Node.js asks you, and then you will have a <code>package.json</code> file that looks something like this:</p>
+<pre>
+<code class="language-javascript">{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "Installs Cypress in a test project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}</code></pre><p>Install Cypress in your project:</p>
+<pre>
+<code class="language-bash">$ npm install cypress --save-dev</code></pre><p>Run Cypress for the first time:</p>
+<pre>
+<code class="language-bash">$ npx cypress open</code></pre><p>Because you haven't added a config or any scaffolding files to Cypress, the Cypress app displays the welcome screen to help you configure the project. To configure your project for E2E (end-to-end) testing, click the <strong>Not Configured</strong> button for E2E Testing. Cypress adds some files to your project:</p>
+<pre>
+<code class="language-bash">cypress/
+node_modules/
+vendor/ 
+web/
+.editorconfig
+.gitattributes
+composer.json
+composer.lock
+cypress.config.js
+package-lock.json
+package.json</code></pre><p>Click <strong>Continue</strong> and choose your preferred browser for testing. Click <strong>Start E2E Testing in [your browser of choice]</strong>. I'm using a Chromium-based browser for this article.</p>
+<p>In a separate window, a browser opens to the <strong>Create your first spec</strong> page:</p>
+<article class="align-center media media--type-image media--view-mode-default">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/2023-04/cypress-in-browser.webp" width="1182" height="656" alt="Cypress in a web browser">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>(Jordan Graham, CC BY-SA 4.0)</p>
+</div>
+
+  </article>
+<p>Click on the <strong>Scaffold example specs</strong> button to create a couple of new folders with example specs to help you understand how to use Cypress. Read through these in your code editor, and you'll likely find the language (based on JavaScript) intuitive and easy to follow.</p>
+<p>Click on <strong>any</strong> in the test browser. This reveals two panels. On the left, a text panel shows each step in the active spec. On the right, a simulated browser window shows the actual user experience as Cypress steps through the spec.</p>
+<p>Open the <code>cypress.config.js</code> file in your project root and change it as follows:</p>
+<pre>
+<code class="language-javascript">const { defineConfig } = require("cypress");
+ 
+module.exports = defineConfig({
+  component: {
+    fixturesFolder: "cypress/fixtures",
+    integrationFolder: "cypress/integration",
+    pluginsFile: "cypress/plugins/index.js",
+    screenshotsFolder: "cypress/screenshots",
+    supportFile: "cypress/support/e2e.js",
+    videosFolder: "cypress/videos",
+    viewportWidth: 1440,
+    viewportHeight: 900,
+  },
+
+  e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
+    baseUrl: "https://[your-local-dev-url]",
+    specPattern: "cypress/**/*.{js,jsx,ts,tsx}",
+    supportFile: "cypress/support/e2e.js",
+    fixturesFolder: "cypress/fixtures"
+   },
+ });</code></pre><p>Change the <code>baseUrl</code> to your project's URL in your local dev environment.</p>
+<p>These changes tell Cypress where to find its resources and how to find all of the specs in your project.</p>
+<h2 id="write-run">Write and run basic tests using Cypress</h2>
+<p>Create a new directory called <code>integration</code> in your <code>/cypress</code> directory. Within the <code>integration</code> directory, create a file called <code>test.cy.js</code>:</p>
+<pre>
+<code class="language-bash">cypress/
+├─ e2e/
+├─ fixtures/
+├─ integration/ 
+│  ├─ test.cy.js
+├─ support/ 
+node_modules/
+vendor/
+web/
+.editorconfig
+.gitattributes
+composer.json
+composer.lock
+cypress.config.js
+package-lock.json
+package.json</code></pre><p>Add the following contents to your <code>test.cy.js</code> file:</p>
+<pre>
+<code class="language-javascript">describe('Loads the front page', () =&gt; {
+  it('Loads the front page', () =&gt; {
+    cy.visit('/')
+    cy.get('h1.page-title')
+      .should('exist')
+  });
+});
+ 
+describe('Tests logging in using an incorrect password', () =&gt; {
+  it('Fails authentication using incorrect login credentials', () =&gt; {
+    cy.visit('/user/login')
+    cy.get('#edit-name')
+      .type('Sir Lancelot of Camelot')
+    cy.get('#edit-pass')
+      .type('tacos')
+    cy.get('input#edit-submit')
+      .contains('Log in')
+      .click()
+    cy.contains('Unrecognized username or password.')
+  });
+});</code></pre><p></p><div class="embedded-resource-list callout-float-right"> 
+                                <a href="#bottom-list" class="visually-hidden focusable skip-link">Skip to bottom of list</a>    <div data-analytics-region="sidebar">
+            <div class="field field--name-title field--type-string field--label-hidden field__item">Our favorite resources about open source</div>
+      
+      <div class="field field--name-links field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="https://opensource.com/downloads/cheat-sheet-git?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Git cheat sheet">Git cheat sheet</a></div>
+              <div class="field__item"><a href="https://developers.redhat.com/cheat-sheets/advanced-linux-commands/?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Advanced Linux commands cheat sheet">Advanced Linux commands cheat sheet</a></div>
+              <div class="field__item"><a href="https://opensource.com/tags/alternatives?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Open source alternatives">Open source alternatives</a></div>
+              <div class="field__item"><a href="https://www.redhat.com/en/services/training/rh024-red-hat-linux-technical-overview?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Free online course: RHEL technical overview">Free online course: RHEL technical overview</a></div>
+              <div class="field__item"><a href="https://console.redhat.com?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Register for your free Red Hat account">Register for your free Red Hat account</a></div>
+              <div class="field__item"><a href="https://opensource.com/downloads/cheat-sheets?intcmp=7016000000127cYAAQ" data-analytics-category="resource list" data-analytics-text="Check out more cheat sheets">Check out more cheat sheets</a></div>
+          </div>
+  </div>
+</div>
+                                <a id="bottom-list" tabindex="-1"></a>
+<p>When you click on <code>test.cy.js</code> in the Cypress application, watch each test description on the left as Cypress performs the steps in each <code>describe()</code> section.</p>
+<p>This spec demonstrates how to tell Cypress to navigate your website, access HTML elements by ID, enter content into input elements, and submit the form. This process is how I discovered that I needed to add the assertion that the <code>&lt;input id="edit-submit"&gt;</code> element contains the text <strong>Log in</strong> before the input was clickable. Apparently, the flex styling of the submit input impeded Cypress' ability to "see" the input, so it couldn't click on it. Testing really works!</p>
+<h2 id="customize-cypress">Customize Cypress for Drupal</h2>
+<p>You can write your own custom Cypress commands, too. Remember the <code>supportFile</code> entry in the <code>cypress.config.js</code> file? It points to a file that Cypress added, which in turn imports the <code>./commands</code> files. Incidentally, Cypress is so clever that when importing logic or data fixtures, you don't need to specify the file extension, so you import <code>./commands</code>, not <code>./commands.js</code>. Cypress looks for any of a dozen or so popular file extensions and understands how to recognize and parse each of them.</p>
+<p>Enter commands into <code>commands.js</code> to define them:</p>
+<pre>
+<code class="language-javascript">/**
+ * Logs out the user.
+ */
+ 
+Cypress.Commands.add('drupalLogout', () =&gt; {
+  cy.visit('/user/logout');
+})
+ 
+/**
+ * Basic user login command. Requires valid username and password.
+ *
+ * @param {string} username
+ *   The username with which to log in.
+ * @param {string} password
+ *   The password for the user's account.
+ */
+ 
+Cypress.Commands.add('loginAs', (username, password) =&gt; {
+  cy.drupalLogout();
+  cy.visit('/user/login');
+  cy.get('#edit-name')
+    .type(username);
+  cy.get('#edit-pass').type(password, {
+    log: false,
+  });
+ 
+  cy.get('#edit-submit').contains('Log in').click();
+});</code></pre><p>This example defines a custom Cypress command called <code>drupalLogout()</code>, which you can use in any subsequent logic, even other custom commands. To log a user out, call <code>cy.drupalLogout()</code>. This is the first event in the custom command <code>loginAs</code> to ensure that Cypress is logged out before attempting to log in as a specific user.</p>
+<p>Using environment variables, you can even create a Cypress command called <code>drush()</code>, which you can use to execute Drush commands in your tests or custom commands. Look at how simple this makes it to define a custom Cypress command that logs a user in using their UID:</p>
+<pre>
+<code class="language-javascript">/**
+* Logs a user in by their uid via drush uli.
+*/
+ 
+Cypress.Commands.add('loginUserByUid', (uid) =&gt; {
+ cy.drush('user-login', [], { uid, uri: Cypress.env('baseUrl') })
+   .its('stdout')
+   .then(function (url) {
+     cy.visit(url);
+   });
+});</code></pre><p>This example uses the <code>drush user-login</code> command (<code>drush uli</code> for short) and takes the authenticated user to the site's base URL.</p>
+<p>Consider the security benefit of never reading or storing user passwords in your testing. Personally, I find it amazing that a front-end technology like Cypress can execute Drush commands, which I've always thought of as being very much on the back end.</p>
+<h2 id="testing-testing">Testing, testing</h2>
+<p>There's a lot more to Cypress, like fixtures (files that hold test data) and various tricks for navigating the sometimes complex data structures that produce a website's user interface. For a look into what's possible, watch the <a href="https://atendesigngroup.com/webinar/cypress-testing-drupal-websites" target="_blank">Cypress Testing for Drupal Websites</a> webinar, particularly <a href="https://youtu.be/pKiBuYImoI8?t=1113" target="_blank">the section on fixtures that begins at 18:33</a>. That webinar goes into greater detail about some interesting use cases, including an Ajax-enabled form. Once you start using it, feel free to use or fork <a href="https://bitbucket.org/aten_cobadger/cypress-for-drupal/src/main/" target="_blank">Aten's public repository of Cypress Testing for Drupal</a>.</p>
+<p>Happy testing!</p>
+<hr>
+<p><em>This article originally appeared on the <a href="https://atendesigngroup.com/articles" target="_blank">Aten blog</a> and is republished with permission.</em></p>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-article-subhead field--type-text-long field--label-hidden field__item"><p>Testing makes everything better. Learn how to use Cypress for your Drupal website.</p>
+</div>
+      
+            <div class="field field--name-field-lead-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-caption">
+  
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://opensource.com/sites/default/files/lead-images/lenovo-thinkpad-laptop-concentration-focus-windows-office.png" width="799" height="447" alt="Business woman on laptop sitting in front of window" title="Woman using laptop concentrating">
+
+</div>
+      
+   <div class="field field--name-field-caption field--type-text-long field--label-hidden caption field__item"><span class="caption__byline">Image by: </span><p>Image by Mapbox Uncharted ERG,&nbsp;<a href="https://creativecommons.org/licenses/by/3.0/us/" rel="ugc" target="_blank">CC-BY 3.0 US</a></p>
+</div>
+
+  </article>
+</div>
+      
+      <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><a href="https://opensource.com/tags/drupal" hreflang="en">Drupal</a></div>
+              <div class="field__item"><a href="https://opensource.com/tags/web-development" hreflang="en">Web development</a></div>
+          </div>
+  
+            <div class="hidden field field--name-field-listicle-title field--type-string field--label-hidden field__item">What to read next</div>
+      
+            <div class="field field--name-field-default-license field--type-list-string field--label-hidden field__item"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License" src="https://opensource.com/themes/osdc/assets/img/cc-by-sa-4.png" title="This work is licensed under a Creative Commons Attribution-Share Alike 4.0 International License."></a>This work is licensed under a Creative Commons Attribution-Share Alike 4.0 International License.</div>
+      <section id="comments" class="field field--name-field-comments field--type-comment field--label-hidden comment-wrapper">
+  
+
+  <div class="comments__count">
+                  <h2>Comments are closed.</h2>
+              <div class="login">These comments are closed.</div>
+  </div>
+
+  
+  
+</section>
